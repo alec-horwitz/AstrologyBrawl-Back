@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180416182123) do
+ActiveRecord::Schema.define(version: 20180416195846) do
 
   create_table "moves", force: :cascade do |t|
     t.string "name"
@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 20180416182123) do
 
   create_table "pokemons", force: :cascade do |t|
     t.string "name"
-    t.string "sprites"
+    t.string "front_sprite"
+    t.string "back_sprite"
   end
 
 end

@@ -17,7 +17,7 @@ initial_seed = [*1..10]
 
 initial_seed.each do |index|
   pokemon_parsed = JSON.parse(RestClient.get("https://pokeapi.co/api/v2/pokemon/#{index}"))
-  pokemon = Pokemon.create(name: pokemon_parsed["name"], sprites: pokemon_parsed["sprites"])
+  pokemon = Pokemon.create(name: pokemon_parsed["name"], front_sprite: pokemon_parsed["sprites"]["front_default"], back_sprite: pokemon_parsed["sprites"]["back_default"])
     [*1..2].each do |i|
       move_parsed = JSON.parse(RestClient.get("https://pokeapi.co/api/v2/move/#{i}"))
       move = Move.create(name: move_parsed["name"], power: move_parsed["power"], pokemon: pokemon)
