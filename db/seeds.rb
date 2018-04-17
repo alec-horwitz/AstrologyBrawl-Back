@@ -23,3 +23,6 @@ initial_seed.each do |index|
       move = Move.create(name: move_parsed["name"], power: move_parsed["power"], pokemon: pokemon)
     end
 end
+
+Game.create(playername: "Red", score: 1000)
+Game.create(playername: "Blue", score: 2000)
