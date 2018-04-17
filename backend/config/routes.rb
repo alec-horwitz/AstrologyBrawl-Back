@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :pokemons
       resources :moves
+      resources :games
+      resources :scores
     end
   end
 
