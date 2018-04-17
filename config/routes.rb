@@ -6,7 +6,6 @@ Rails.application.routes.draw do
       resources :pokemons
       resources :moves
       resources :games
-      resources :scores
     end
   end
 

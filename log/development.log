@@ -1,0 +1,2694 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (27.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (228.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePokemon (20180416174632)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (49.5ms)[0m  [1m[35mCREATE TABLE "pokemons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "sprites" varchar)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416174632"]]
+  [1m[35m (311.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMoves (20180416175657)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (53.4ms)[0m  [1m[35mCREATE TABLE "moves" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "power" varchar)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416175657"]]
+  [1m[35m (17.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (9.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-16 18:11:09.279793"], ["updated_at", "2018-04-16 18:11:09.279793"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (22.8ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "bulbasaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png\"}"]]
+  [1m[35m (338.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPokemonIdToMoves (20180416182123)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (27.4ms)[0m  [1m[35mALTER TABLE "moves" ADD "pokemon_id" integer[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416182123"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (27.0ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "bulbasaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png\"}"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (51.6ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 2]]
+  [1m[35m (21.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 2]]
+  [1m[35m (57.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "ivysaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/2.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png\"}"]]
+  [1m[35m (19.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 3]]
+  [1m[35m (168.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 3]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "venusaur"], ["sprites", "{\"back_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/3.png\", \"back_shiny_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/3.png\", \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png\", \"front_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/3.png\", \"front_shiny_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/3.png\", \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/3.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/3.png\"}"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 4]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "charmander"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/4.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png\"}"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 5]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 5]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "charmeleon"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/5.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/5.png\"}"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 6]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 6]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "charizard"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/6.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png\"}"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 7]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 7]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "squirtle"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/7.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/7.png\"}"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 8]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 8]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "wartortle"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/8.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/8.png\"}"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 9]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 9]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "blastoise"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/9.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/9.png\"}"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 10]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 10]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "caterpie"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10.png\"}"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 11]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 11]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPokemon Load (25.0ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMove Load (13.2ms)[0m  [1m[34mSELECT  "moves".* FROM "moves" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (33.8ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "bulbasaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png\"}"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (14.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "bulbasaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png\"}"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (9.3ms)[0m  [1m[32mINSERT INTO "moves" ("pokemon_id") VALUES (?)[0m  [["pokemon_id", 13]]
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "bulbasaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png\"}"]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.3ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 14]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 14]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "ivysaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/2.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png\"}"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 15]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 15]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "venusaur"], ["sprites", "{\"back_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/3.png\", \"back_shiny_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/3.png\", \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png\", \"front_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/3.png\", \"front_shiny_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/3.png\", \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/3.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/3.png\"}"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 16]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 16]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "charmander"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/4.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png\"}"]]
+  [1m[35m (125.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 17]]
+  [1m[35m (38.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 17]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "charmeleon"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/5.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/5.png\"}"]]
+  [1m[35m (23.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 18]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 18]]
+  [1m[35m (62.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "charizard"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/6.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png\"}"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 19]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (58.9ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 19]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "squirtle"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/7.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/7.png\"}"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 20]]
+  [1m[35m (15.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 20]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "wartortle"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/8.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/8.png\"}"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 21]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 21]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "blastoise"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/9.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/9.png\"}"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 22]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 22]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "caterpie"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10.png\"}"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 23]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 23]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPokemon Load (571.6ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMove Load (69.8ms)[0m  [1m[34mSELECT  "moves".* FROM "moves" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (38.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves"[0m
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 14:46:02 -0400
+  [1m[35m (19.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/pokemons"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-04-16 14:46:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/pokemon" for 127.0.0.1 at 2018-04-16 14:46:10 -0400
+  
+ActionController::RoutingError (uninitialized constant Api::V1::PokemonController):
+  
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 14:47:11 -0400
+  [1m[35m (18.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PokemonsController#index as HTML
+  [1m[36mPokemon Load (1.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 83ms (Views: 49.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 14:47:29 -0400
+  
+LoadError (Unable to autoload constant Api::V1::MovesController, expected /Users/gl9009/dev/projects/flatiron/pokemon_brawl/PokemonBrawl-Back/backend/app/controllers/concerns/api/v1/moves_controller.rb to define it):
+  
+activesupport (5.1.6) lib/active_support/dependencies.rb:512:in `load_missing_constant'
+activesupport (5.1.6) lib/active_support/dependencies.rb:202:in `const_missing'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `constantize'
+activesupport (5.1.6) lib/active_support/dependencies.rb:583:in `get'
+activesupport (5.1.6) lib/active_support/dependencies.rb:614:in `constantize'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:99:in `binary_params_for?'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:90:in `set_binary_encoding'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:67:in `path_parameters='
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mPokemon Load (34.6ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPokemon Load (1.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1007.1ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1836.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (230.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1254.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 3]]
+  [1m[35m (184.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 4]]
+  [1m[35m (50.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 5]]
+  [1m[35m (433.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 6]]
+  [1m[35m (170.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 7]]
+  [1m[35m (187.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 8]]
+  [1m[35m (329.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (70.6ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 9]]
+  [1m[35m (296.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 10]]
+  [1m[35m (562.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (11.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 11]]
+  [1m[35m (601.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.7ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 12]]
+  [1m[35m (108.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 13]]
+  [1m[35m (62.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 15]]
+  [1m[35m (51.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 16]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 17]]
+  [1m[35m (22.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 18]]
+  [1m[35m (43.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 19]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 20]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 21]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 22]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 23]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 6]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 13]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 17]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 19]]
+  [1m[35m (21.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 20]]
+  [1m[35m (38.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (6.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.9ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 21]]
+  [1m[35m (110.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (101.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 22]]
+  [1m[35m (148.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 23]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (20.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 24]]
+  [1m[35m (21.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 25]]
+  [1m[35m (22.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 26]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 27]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 28]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 29]]
+  [1m[35m (27.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 30]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 31]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 32]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 33]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 34]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 35]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 36]]
+  [1m[35m (19.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 37]]
+  [1m[35m (19.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 38]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 39]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 40]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "bulbasaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png\"}"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 24]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 24]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "ivysaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/2.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png\"}"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 25]]
+  [1m[35m (22.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 25]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "venusaur"], ["sprites", "{\"back_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/3.png\", \"back_shiny_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/3.png\", \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png\", \"front_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/3.png\", \"front_shiny_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/3.png\", \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/3.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/3.png\"}"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 26]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 24]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 25]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 26]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 42]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 43]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 44]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 45]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 46]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "bulbasaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png\"}"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 27]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 27]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "ivysaur"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/2.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png\"}"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 28]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 28]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "venusaur"], ["sprites", "{\"back_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/3.png\", \"back_shiny_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/3.png\", \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png\", \"front_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/3.png\", \"front_shiny_female\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/3.png\", \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/3.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/3.png\"}"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 29]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 29]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "charmander"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/4.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png\"}"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 30]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 30]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "charmeleon"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/5.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/5.png\"}"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 31]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 31]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "charizard"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/6.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png\"}"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 32]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (159.1ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 32]]
+  [1m[35m (164.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "squirtle"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/7.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/7.png\"}"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 33]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 33]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "wartortle"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/8.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/8.png\"}"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 34]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 34]]
+  [1m[35m (24.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "blastoise"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/9.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/9.png\"}"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 35]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 35]]
+  [1m[35m (42.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "sprites") VALUES (?, ?)[0m  [["name", "caterpie"], ["sprites", "{\"back_female\"=>nil, \"back_shiny_female\"=>nil, \"back_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png\", \"front_female\"=>nil, \"front_shiny_female\"=>nil, \"back_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10.png\", \"front_default\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png\", \"front_shiny\"=>\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10.png\"}"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 36]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 36]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 14:56:42 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 14:56:52 -0400
+  
+LoadError (Unable to autoload constant Api::V1::MovesController, expected /Users/gl9009/dev/projects/flatiron/pokemon_brawl/PokemonBrawl-Back/backend/app/controllers/concerns/api/v1/moves_controller.rb to define it):
+  
+activesupport (5.1.6) lib/active_support/dependencies.rb:512:in `load_missing_constant'
+activesupport (5.1.6) lib/active_support/dependencies.rb:202:in `const_missing'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `constantize'
+activesupport (5.1.6) lib/active_support/dependencies.rb:583:in `get'
+activesupport (5.1.6) lib/active_support/dependencies.rb:614:in `constantize'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:99:in `binary_params_for?'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:90:in `set_binary_encoding'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:67:in `path_parameters='
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Processing by Api::V1::PokemonsController#index as HTML
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 14:56:53 -0400
+Processing by Api::V1::PokemonsController#index as HTML
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 59ms (Views: 28.1ms | ActiveRecord: 1.6ms)
+
+
+Completed 200 OK in 60ms (Views: 27.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 14:57:21 -0400
+  
+LoadError (Unable to autoload constant Api::V1::MovesController, expected /Users/gl9009/dev/projects/flatiron/pokemon_brawl/PokemonBrawl-Back/backend/app/controllers/concerns/api/v1/moves_controller.rb to define it):
+  
+activesupport (5.1.6) lib/active_support/dependencies.rb:512:in `load_missing_constant'
+activesupport (5.1.6) lib/active_support/dependencies.rb:202:in `const_missing'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `constantize'
+activesupport (5.1.6) lib/active_support/dependencies.rb:583:in `get'
+activesupport (5.1.6) lib/active_support/dependencies.rb:614:in `constantize'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:99:in `binary_params_for?'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:90:in `set_binary_encoding'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:67:in `path_parameters='
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 14:57:50 -0400
+Processing by Api::V1::MovesController#index as HTML
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 120ms (Views: 30.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 14:58:48 -0400
+Processing by Api::V1::PokemonsController#index as HTML
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 96ms (Views: 35.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 14:59:19 -0400
+Processing by Api::V1::MovesController#index as HTML
+  [1m[36mMove Load (0.8ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:01:19 -0400
+Processing by Api::V1::PokemonsController#index as HTML
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 15:01:24 -0400
+Processing by Api::V1::MovesController#index as HTML
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/movess" for 127.0.0.1 at 2018-04-16 15:01:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/movess"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:25:49 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 24ms (Views: 17.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:26:15 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:26:25 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:27:48 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:35:24 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (1.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 28ms (Views: 18.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:36:23 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (1.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 23ms (Views: 14.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:36:33 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:39:48 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (6.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 25ms (Views: 14.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:40:13 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:40:27 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 15:40:37 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (16.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (179.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (221.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePokemon (20180416174632)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePokemons (20180416174632)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "pokemons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "sprites" varchar)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416174632"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMoves (20180416175657)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "moves" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "power" varchar)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416175657"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPokemonIdToMoves (20180416182123)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.7ms)[0m  [1m[35mALTER TABLE "moves" ADD "pokemon_id" integer[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416182123"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemoveSpritesFromPokemon (20180416195644)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveSpritesFromPokemons (20180416195644)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apokemons" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "sprites" varchar DEFAULT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "apokemons" ("id","name","sprites")
+                     SELECT "id","name","sprites" FROM "pokemons"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "pokemons"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "pokemons" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "pokemons" ("id","name")
+                     SELECT "id","name" FROM "apokemons"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "apokemons"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416195644"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFrontSpriteToPokemons (20180416195830)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "pokemons" ADD "front_sprite" varchar[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416195830"]]
+  [1m[35m (152.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddBackSpriteToPokemons (20180416195846)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "pokemons" ADD "back_sprite" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416195846"]]
+  [1m[35m (512.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (52.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-16 20:02:56.806808"], ["updated_at", "2018-04-16 20:02:56.806808"]]
+  [1m[35m (28.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPokemon Load (19.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (12.8ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (21.9ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "bulbasaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (37.2ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 1]]
+  [1m[35m (171.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 1]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "ivysaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 2]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 2]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "venusaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"]]
+  [1m[35m (30.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPokemon Load (17.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "bulbasaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.0ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 1]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 1]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "ivysaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "venusaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 3]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 3]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "charmander"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 4]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 4]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (25.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "charmeleon"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 5]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 5]]
+  [1m[35m (20.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "charizard"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png"]]
+  [1m[35m (267.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 6]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 6]]
+  [1m[35m (64.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "squirtle"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 7]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 7]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "wartortle"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 8]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 8]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "blastoise"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 9]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 9]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "caterpie"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "pound"], ["power", "40"], ["pokemon_id", 10]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id") VALUES (?, ?, ?)[0m  [["name", "karate-chop"], ["power", "50"], ["pokemon_id", 10]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 16:42:59 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (15.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 174ms (Views: 130.1ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 16:54:49 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 16:54:49 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (474.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 1050ms (Views: 494.0ms | ActiveRecord: 474.7ms)
+
+
+  [1m[36mMove Load (70.0ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 1244ms (Views: 229.1ms | ActiveRecord: 71.9ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 16:55:21 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 16:55:21 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (54.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 273ms (Views: 211.3ms | ActiveRecord: 54.5ms)
+
+
+  [1m[36mMove Load (12.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 320ms (Views: 289.7ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 16:55:46 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 16:55:46 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (1.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 17:00:51 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 17:00:51 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mMove Load (2.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (24.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 62ms (Views: 56.2ms | ActiveRecord: 2.4ms)
+
+
+Completed 200 OK in 50ms (Views: 25.0ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 17:06:06 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 17:06:06 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 54ms (Views: 48.8ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 17:06:34 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 17:06:34 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (1.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 57ms (Views: 45.7ms | ActiveRecord: 1.6ms)
+
+
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 17:07:23 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 17:07:23 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 404ms (Views: 402.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 17:08:50 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 17:08:50 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (1.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (10.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 184ms (Views: 181.1ms | ActiveRecord: 1.5ms)
+
+
+Completed 200 OK in 242ms (Views: 225.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 17:08:57 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 17:08:57 -0400
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.5ms)
+
+
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 92ms (Views: 91.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 17:09:06 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 17:09:07 -0400
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Processing by Api::V1::MovesController#index as */*
+Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mMove Load (1.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 17:12:58 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 17:12:59 -0400
+  [1m[36mPokemon Load (22.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Processing by Api::V1::MovesController#index as */*
+Completed 200 OK in 246ms (Views: 213.2ms | ActiveRecord: 22.8ms)
+
+
+  [1m[36mMove Load (0.7ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 149ms (Views: 147.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-16 17:13:12 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 17:13:12 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (113.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 151ms (Views: 37.5ms | ActiveRecord: 113.1ms)
+
+
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-16 19:13:13 -0400
+Processing by Api::V1::MovesController#index as HTML
+  [1m[36mMove Load (307.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 1270ms (Views: 956.3ms | ActiveRecord: 307.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:07:20 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:07:20 -0400
+  [1m[35m (19.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (29.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (25.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 245ms (Views: 62.6ms | ActiveRecord: 31.3ms)
+
+
+Completed 200 OK in 249ms (Views: 38.8ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:07:42 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:07:42 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mMove Load (64.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (22.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 97ms (Views: 31.3ms | ActiveRecord: 64.9ms)
+
+
+Completed 200 OK in 33ms (Views: 10.2ms | ActiveRecord: 22.6ms)
+
+
+  [1m[36mMove Load (34.3ms)[0m  [1m[34mSELECT  "moves".* FROM "moves" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT  "moves".* FROM "moves" ORDER BY "moves"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPokemon Load (16.0ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:19:55 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:19:55 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 29ms (Views: 23.6ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:21:27 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:21:27 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mMove Load (18.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 36ms (Views: 17.4ms | ActiveRecord: 18.2ms)
+
+
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:21:48 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:21:48 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 36ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:25:25 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:25:25 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (1.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 25ms (Views: 18.3ms | ActiveRecord: 1.6ms)
+
+
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:26:04 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:26:04 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (10.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.9ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 19ms (Views: 7.5ms | ActiveRecord: 10.8ms)
+
+
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:27:06 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:27:06 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:27:52 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:27:52 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:28:50 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:28:50 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:31:45 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:31:45 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:31:54 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:31:54 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:35:18 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:35:18 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (1.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.9ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 24ms (Views: 17.0ms | ActiveRecord: 1.7ms)
+
+
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:36:25 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:36:25 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:39:43 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:39:43 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:40:13 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:40:13 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:40:27 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:40:27 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:41:13 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:41:13 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:42:21 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:42:21 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:42:32 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:42:32 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:45:42 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:45:42 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:46:10 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:46:10 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Processing by Api::V1::MovesController#index as */*
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:47:18 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:47:18 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:48:23 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:48:23 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:48:28 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:48:28 -0400
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:48:57 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:48:58 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:51:44 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:51:44 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 09:55:19 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 09:55:19 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.7ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 26ms (Views: 19.4ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:09:50 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:09:50 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 24ms (Views: 16.2ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:10:43 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:10:43 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:11:16 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:11:16 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:11:48 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:11:48 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:19:40 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:19:40 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (2.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 31ms (Views: 24.8ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:21:16 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:21:16 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (24.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.9ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 32ms (Views: 6.8ms | ActiveRecord: 24.6ms)
+
+
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:22:11 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:22:11 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (24.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 33ms (Views: 8.1ms | ActiveRecord: 24.1ms)
+
+
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:23:52 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:23:52 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (26.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 32ms (Views: 5.4ms | ActiveRecord: 26.6ms)
+
+
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:29:04 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:29:04 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (8.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 16ms (Views: 6.6ms | ActiveRecord: 8.8ms)
+
+
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:33:02 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:33:02 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (28.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 81ms (Views: 51.3ms | ActiveRecord: 28.2ms)
+
+
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:33:13 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:33:13 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (9.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 15ms (Views: 5.2ms | ActiveRecord: 9.6ms)
+
+
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:34:05 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:34:05 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (11.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 16ms (Views: 4.5ms | ActiveRecord: 11.2ms)
+
+
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:34:36 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:34:36 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (10.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 18ms (Views: 7.3ms | ActiveRecord: 10.8ms)
+
+
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:35:22 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:35:22 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (9.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 14ms (Views: 3.8ms | ActiveRecord: 9.8ms)
+
+
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:44:51 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:44:51 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (15.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 20ms (Views: 4.5ms | ActiveRecord: 15.2ms)
+
+
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:51:26 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:51:26 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mMove Load (15.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (1.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 45ms (Views: 25.1ms | ActiveRecord: 15.6ms)
+
+
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:51:39 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:51:39 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:53:08 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:53:08 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mMove Load (22.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 32ms (Views: 9.8ms | ActiveRecord: 22.2ms)
+
+
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:53:51 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:53:51 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (37.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 42ms (Views: 4.7ms | ActiveRecord: 37.0ms)
+
+
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:54:56 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:54:56 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (17.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (1.8ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 44ms (Views: 21.5ms | ActiveRecord: 17.7ms)
+
+
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:55:50 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:55:50 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (23.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (2.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 34ms (Views: 9.7ms | ActiveRecord: 23.8ms)
+
+
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:56:20 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:56:20 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (15.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (1.9ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 45ms (Views: 24.7ms | ActiveRecord: 15.1ms)
+
+
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:57:21 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:57:21 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mMove Load (23.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 37ms (Views: 13.3ms | ActiveRecord: 23.5ms)
+
+
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 10:59:50 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 10:59:50 -0400
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:00:49 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:00:49 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (13.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.7ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 21ms (Views: 7.3ms | ActiveRecord: 13.5ms)
+
+
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:06:15 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:06:15 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (27.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 35ms (Views: 6.9ms | ActiveRecord: 27.5ms)
+
+
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:08:05 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:08:05 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (18.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 36ms (Views: 16.2ms | ActiveRecord: 18.0ms)
+
+
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:09:42 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:09:42 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mMove Load (14.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 20ms (Views: 5.7ms | ActiveRecord: 14.4ms)
+
+
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:09:58 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:09:58 -0400
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Processing by Api::V1::MovesController#index as */*
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mMove Load (27.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 35ms (Views: 7.2ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:13:08 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:13:08 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (14.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 19ms (Views: 4.0ms | ActiveRecord: 14.3ms)
+
+
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:13:38 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:13:38 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (11.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 16ms (Views: 4.6ms | ActiveRecord: 11.0ms)
+
+
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:14:00 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:14:00 -0400
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Processing by Api::V1::MovesController#index as */*
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:14:10 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:14:10 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (20.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 25ms (Views: 3.9ms | ActiveRecord: 20.5ms)
+
+
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:16:11 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:16:11 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (25.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 31ms (Views: 4.8ms | ActiveRecord: 25.4ms)
+
+
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:18:18 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:18:18 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (13.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 19ms (Views: 4.9ms | ActiveRecord: 13.3ms)
+
+
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:24:36 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:24:36 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (23.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 29ms (Views: 4.9ms | ActiveRecord: 23.8ms)
+
+
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:25:27 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:25:27 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (22.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 32ms (Views: 8.8ms | ActiveRecord: 22.5ms)
+
+
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:25:39 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:25:39 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (30.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 36ms (Views: 5.1ms | ActiveRecord: 30.4ms)
+
+
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:25:41 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:26:44 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:26:44 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (14.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 24ms (Views: 9.1ms | ActiveRecord: 14.3ms)
+
+
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:27:07 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (11.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 17ms (Views: 5.8ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:27:55 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:27:55 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (17.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 24ms (Views: 5.5ms | ActiveRecord: 17.7ms)
+
+
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:27:59 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:28:03 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (26.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 32ms (Views: 5.7ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:28:06 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:28:20 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:28:20 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (41.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 45ms (Views: 3.3ms | ActiveRecord: 41.0ms)
+
+
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:28:24 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:28:52 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:28:52 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (10.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 10.2ms)
+
+
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:30:32 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (27.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 34ms (Views: 6.5ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:30:32 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:30:32 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:30:43 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (30.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:30:43 -0400
+Completed 200 OK in 35ms (Views: 3.7ms | ActiveRecord: 30.8ms)
+
+
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:30:48 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:30:48 -0400
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:30:57 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (22.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 26ms (Views: 2.8ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:31:24 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:31:24 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (11.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 15ms (Views: 4.0ms | ActiveRecord: 11.0ms)
+
+
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:31:43 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:31:43 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (55.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 59ms (Views: 3.4ms | ActiveRecord: 55.3ms)
+
+
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:31:47 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:31:49 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (9.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 12ms (Views: 2.6ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:31:51 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:34:30 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:34:30 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (20.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 47ms (Views: 19.3ms | ActiveRecord: 20.0ms)
+
+
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 11:35:08 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 11:35:08 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (24.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (1.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 40ms (Views: 14.9ms | ActiveRecord: 24.5ms)
+
+
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlayers (20180417154755)
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGames (20180417154755)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (14.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (29.7ms)[0m  [1m[35mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "playername" varchar)[0m
+  [1m[35mSQL (64.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417154755"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateScores (20180417155025)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "scores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "points" integer, "game_Id" integer)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417155025"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-04-17 12:00:38 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/gl9009/.rvm/gems/ruby-2.3.3/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gl9009/.rvm/gems/ruby-2.3.3/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (20.4ms)
+Completed 200 OK in 191ms (Views: 132.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-17 12:00:41 -0400
+Processing by Api::V1::GamesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 206ms (Views: 2.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-04-17 12:00:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (20.9ms)[0m  [1m[32mINSERT INTO "games" ("playername") VALUES (?)[0m  [["playername", "red"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-17 12:01:14 -0400
+Processing by Api::V1::GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."playername" = ? LIMIT ?[0m  [["playername", "red"], ["LIMIT", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."playername" = ? LIMIT ?[0m  [["playername", "red"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "scores" ("points", "game_Id") VALUES (?, ?)[0m  [["points", 1000], ["game_Id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/v1/scores" for 127.0.0.1 at 2018-04-17 12:03:05 -0400
+Processing by Api::V1::ScoresController#index as HTML
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+Completed 200 OK in 42ms (Views: 7.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/socres" for 127.0.0.1 at 2018-04-17 12:03:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/socres"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/game" for 127.0.0.1 at 2018-04-17 12:03:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/game"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/scores" for 127.0.0.1 at 2018-04-17 12:03:33 -0400
+Processing by Api::V1::ScoresController#index as HTML
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 12:15:47 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 12:15:47 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (0.9ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 150ms (Views: 53.4ms | ActiveRecord: 1.7ms)
+
+
+Completed 200 OK in 166ms (Views: 55.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 12:16:06 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 12:16:06 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 12:53:04 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 12:53:04 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (1.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (127.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 336ms (Views: 203.3ms | ActiveRecord: 127.4ms)
+
+
+Completed 200 OK in 222ms (Views: 218.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:00:37 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:00:37 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (14.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (1.0ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 42ms (Views: 21.3ms | ActiveRecord: 14.9ms)
+
+
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:04:57 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:04:57 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (19.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.7ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 31ms (Views: 10.7ms | ActiveRecord: 19.5ms)
+
+
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:05:40 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:05:40 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (35.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.7ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 75ms (Views: 37.7ms | ActiveRecord: 35.8ms)
+
+
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:06:08 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:06:08 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (30.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 42ms (Views: 11.0ms | ActiveRecord: 30.5ms)
+
+
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:06:23 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:06:23 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mMove Load (1.7ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 1.7ms)
+
+
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:06:46 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:06:46 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (27.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 34ms (Views: 6.8ms | ActiveRecord: 27.4ms)
+
+
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:07:17 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:07:17 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (26.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 31ms (Views: 4.2ms | ActiveRecord: 26.7ms)
+
+
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:07:46 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:07:46 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (20.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 30ms (Views: 9.4ms | ActiveRecord: 20.6ms)
+
+
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:08:41 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:08:41 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (18.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (1.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 49ms (Views: 25.6ms | ActiveRecord: 18.6ms)
+
+
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:09:20 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (11.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:09:20 -0400
+Completed 200 OK in 52ms (Views: 39.9ms | ActiveRecord: 11.6ms)
+
+
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (1.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:10:27 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (38.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:10:27 -0400
+Completed 200 OK in 45ms (Views: 6.1ms | ActiveRecord: 38.0ms)
+
+
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (0.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:13:02 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:13:02 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (19.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (1.0ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 50ms (Views: 24.9ms | ActiveRecord: 19.7ms)
+
+
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-17 13:20:22 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-17 13:20:22 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mMove Load (44.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 91ms (Views: 38.5ms | ActiveRecord: 44.6ms)
+
+
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (20.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePokemons (20180416174632)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "pokemons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "sprites" varchar)[0m
+  [1m[35mSQL (28.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416174632"]]
+  [1m[35m (33.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMoves (20180416175657)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "moves" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "power" varchar)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416175657"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPokemonIdToMoves (20180416182123)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "moves" ADD "pokemon_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416182123"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemoveSpritesFromPokemons (20180416195644)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apokemons" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "sprites" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "apokemons" ("id","name","sprites")
+                     SELECT "id","name","sprites" FROM "pokemons"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "pokemons"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "pokemons" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "pokemons" ("id","name")
+                     SELECT "id","name" FROM "apokemons"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "apokemons"[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416195644"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFrontSpriteToPokemons (20180416195830)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "pokemons" ADD "front_sprite" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416195830"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddBackSpriteToPokemons (20180416195846)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "pokemons" ADD "back_sprite" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180416195846"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGames (20180417154755)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "playername" varchar, "score" varchar)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417154755"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-17 17:43:57.066095"], ["updated_at", "2018-04-17 17:43:57.066095"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
