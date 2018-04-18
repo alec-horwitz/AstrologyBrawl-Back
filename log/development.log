@@ -13498,3 +13498,1624 @@ Processing by Api::V1::PokemonsController#index as HTML
 Completed 200 OK in 73ms (Views: 22.0ms | ActiveRecord: 2.5ms)
 
 
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:37:08 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:37:08 -0400
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:37:08 -0400
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (1.7ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 1.7ms)
+
+
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 27ms (Views: 8.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:37:21 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:37:21 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:37:21 -0400
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mMove Load (1.8ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 1.8ms)
+
+
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:37:25 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:37:25 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:37:25 -0400
+Processing by Api::V1::GamesController#index as */*
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mMove Load (1.9ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 1.9ms)
+
+
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:38:03 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:38:03 -0400
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:38:03 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.7ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:38:42 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:38:42 -0400
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:38:42 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mMove Load (3.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (1.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 58ms (Views: 47.9ms | ActiveRecord: 3.1ms)
+
+
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 1.3ms)
+
+
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:38:47 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:38:47 -0400
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:38:47 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mMove Load (1.4ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:38:51 -0400
+Processing by Api::V1::PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:38:51 -0400
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:38:51 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mMove Load (1.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 62ms (Views: 60.5ms | ActiveRecord: 1.1ms)
+
+
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:39:08 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:39:08 -0400
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:39:08 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (0.8ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.8ms)
+
+
+Completed 200 OK in 42ms (Views: 41.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:39:29 -0400
+Processing by Api::V1::MovesController#index as HTML
+  [1m[36mMove Load (0.8ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:40:35 -0400
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:40:35 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:40:35 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::GamesController#index as */*
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mPokemon Load (1.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mMove Load (2.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 27ms (Views: 20.6ms | ActiveRecord: 1.5ms)
+
+
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:41:02 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:41:02 -0400
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:41:02 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (1.7ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 1.7ms)
+
+
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:41:16 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:41:16 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::MovesController#index as */*
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:41:16 -0400
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mMove Load (1.8ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Processing by Api::V1::GamesController#index as */*
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:41:56 -0400
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:41:56 -0400
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:41:56 -0400
+Processing by Api::V1::MovesController#index as */*
+Processing by Api::V1::PokemonsController#index as */*
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mMove Load (0.9ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.9ms)
+
+
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:42:28 -0400
+Processing by Api::V1::PokemonsController#index as */*
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:42:28 -0400
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:42:28 -0400
+Processing by Api::V1::GamesController#index as */*
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.6ms)
+
+
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mMove Load (1.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 98ms (Views: 96.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:43:01 -0400
+Processing by Api::V1::MovesController#index as HTML
+  [1m[36mMove Load (7.3ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 89ms (Views: 76.6ms | ActiveRecord: 7.3ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPokemon Load (10.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (33.9ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMove Load (73.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 1]]
+  [1m[35m (279.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 2]]
+  [1m[35m (24.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 3]]
+  [1m[35m (33.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 4]]
+  [1m[35m (22.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 5]]
+  [1m[35m (26.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 6]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 7]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 9]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 16]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 17]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 18]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 19]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 20]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 21]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 22]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 23]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 24]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 25]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 26]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 27]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 28]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 29]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 30]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 31]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 32]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 33]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 34]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 35]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 36]]
+  [1m[35m (15.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 37]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 38]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 39]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 40]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 41]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 42]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 43]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 44]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 45]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 46]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 47]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 48]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 49]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 50]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 51]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 52]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 53]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 54]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 55]]
+  [1m[35m (25.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 56]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 57]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 58]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 59]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 60]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 61]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 62]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 63]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 64]]
+  [1m[35m (30.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 65]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 66]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 67]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 68]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 69]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 70]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 71]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 72]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 73]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 74]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 75]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 76]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 77]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 78]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 79]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 80]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 81]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 82]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 83]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 84]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 85]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 86]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 87]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 88]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 89]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 90]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 91]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 92]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 93]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 94]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 95]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 96]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 97]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 98]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 99]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 100]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 101]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 102]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 103]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 104]]
+  [1m[35m (26.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 105]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 106]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 107]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 108]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 109]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 110]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 111]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 112]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 113]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 114]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 115]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 116]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 117]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 118]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 119]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 120]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 121]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 122]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 123]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 124]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 125]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 126]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 127]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 128]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 129]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 130]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 131]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 132]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 133]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 134]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 135]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 136]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 137]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 138]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 139]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 140]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 141]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 142]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 143]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 144]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 145]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 146]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 147]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 148]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 149]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 150]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 151]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 152]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 153]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 154]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 155]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 156]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 157]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 158]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 159]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 160]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 161]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 162]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 163]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 164]]
+  [1m[35m (25.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 165]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 166]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 167]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 168]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 169]]
+  [1m[35m (16.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 170]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 171]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 172]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 173]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 174]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 175]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 176]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 177]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 178]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 179]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 180]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 181]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 182]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 183]]
+  [1m[35m (36.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 184]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 185]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 186]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 187]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 188]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 189]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 190]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "bulbasaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ?, "type2" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "poison"], ["type2", "grass"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "pokemon_id", "move_type", "pp") VALUES (?, ?, ?, ?)[0m  [["name", "swords-dance"], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 20]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "moves" SET "power" = ? WHERE "moves"."id" = ?[0m  [["power", 0], ["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "moves" SET "accuracy" = ? WHERE "moves"."id" = ?[0m  [["accuracy", 0], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "pokemon_id", "move_type", "pp") VALUES (?, ?, ?, ?)[0m  [["name", "cut"], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 30]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPokemon Load (11.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 1]]
+  [1m[35m (48.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMove Load (0.6ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 1]]
+  [1m[35m (146.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 2]]
+  [1m[35m (43.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGame Load (29.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "bulbasaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ?, "type2" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "poison"], ["type2", "grass"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "swords-dance"], ["power", 0], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cut"], ["power", 50], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 30], ["accuracy", 95]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bind"], ["power", 15], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "vine-whip"], ["power", 45], ["pokemon_id", 1], ["move_type", "grass"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "headbutt"], ["power", 70], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tackle"], ["power", 40], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body-slam"], ["power", 85], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "take-down"], ["power", 90], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "double-edge"], ["power", 120], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "growl"], ["power", 0], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 40], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPokemon Load (21.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMove Load (0.5ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 1]]
+  [1m[35m (41.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "moves" WHERE "moves"."id" = ?[0m  [["id", 10]]
+  [1m[35m (98.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGame Load (28.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "bulbasaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ?, "type2" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "poison"], ["type2", "grass"], ["id", 1]]
+  [1m[35m (34.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "swords-dance"], ["power", 0], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cut"], ["power", 50], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 30], ["accuracy", 95]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bind"], ["power", 15], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "vine-whip"], ["power", 45], ["pokemon_id", 1], ["move_type", "grass"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "headbutt"], ["power", 70], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tackle"], ["power", 40], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body-slam"], ["power", 85], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "take-down"], ["power", 90], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "double-edge"], ["power", 120], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (26.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "growl"], ["power", 0], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 40], ["accuracy", 100]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "strength"], ["power", 80], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mega-drain"], ["power", 40], ["pokemon_id", 1], ["move_type", "grass"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "leech-seed"], ["power", 0], ["pokemon_id", 1], ["move_type", "grass"], ["pp", 10], ["accuracy", 90]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "growth"], ["power", 0], ["pokemon_id", 1], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "razor-leaf"], ["power", 55], ["pokemon_id", 1], ["move_type", "grass"], ["pp", 25], ["accuracy", 95]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "solar-beam"], ["power", 120], ["pokemon_id", 1], ["move_type", "grass"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (45.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "poison-powder"], ["power", 0], ["pokemon_id", 1], ["move_type", "poison"], ["pp", 35], ["accuracy", 75]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "sleep-powder"], ["power", 0], ["pokemon_id", 1], ["move_type", "grass"], ["pp", 15], ["accuracy", 75]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "petal-dance"], ["power", 120], ["pokemon_id", 1], ["move_type", "grass"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "ivysaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ?, "type2" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "poison"], ["type2", "grass"], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cut"], ["power", 50], ["pokemon_id", 2], ["move_type", "normal"], ["pp", 30], ["accuracy", 95]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bind"], ["power", 15], ["pokemon_id", 2], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "vine-whip"], ["power", 45], ["pokemon_id", 2], ["move_type", "grass"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "headbutt"], ["power", 70], ["pokemon_id", 2], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tackle"], ["power", 40], ["pokemon_id", 2], ["move_type", "normal"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.9ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body-slam"], ["power", 85], ["pokemon_id", 2], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "take-down"], ["power", 90], ["pokemon_id", 2], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "double-edge"], ["power", 120], ["pokemon_id", 2], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "growl"], ["power", 0], ["pokemon_id", 2], ["move_type", "normal"], ["pp", 40], ["accuracy", 100]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "strength"], ["power", 80], ["pokemon_id", 2], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mega-drain"], ["power", 40], ["pokemon_id", 2], ["move_type", "grass"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "leech-seed"], ["power", 0], ["pokemon_id", 2], ["move_type", "grass"], ["pp", 10], ["accuracy", 90]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "growth"], ["power", 0], ["pokemon_id", 2], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "razor-leaf"], ["power", 55], ["pokemon_id", 2], ["move_type", "grass"], ["pp", 25], ["accuracy", 95]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "solar-beam"], ["power", 120], ["pokemon_id", 2], ["move_type", "grass"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "poison-powder"], ["power", 0], ["pokemon_id", 2], ["move_type", "poison"], ["pp", 35], ["accuracy", 75]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "venusaur"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ?, "type2" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "poison"], ["type2", "grass"], ["id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cut"], ["power", 50], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 30], ["accuracy", 95]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bind"], ["power", 15], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "vine-whip"], ["power", 45], ["pokemon_id", 3], ["move_type", "grass"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "headbutt"], ["power", 70], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tackle"], ["power", 40], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body-slam"], ["power", 85], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "take-down"], ["power", 90], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "double-edge"], ["power", 120], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "growl"], ["power", 0], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 40], ["accuracy", 100]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "roar"], ["power", 0], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hyper-beam"], ["power", 150], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 5], ["accuracy", 90]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "strength"], ["power", 80], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mega-drain"], ["power", 40], ["pokemon_id", 3], ["move_type", "grass"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "leech-seed"], ["power", 0], ["pokemon_id", 3], ["move_type", "grass"], ["pp", 10], ["accuracy", 90]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "growth"], ["power", 0], ["pokemon_id", 3], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "razor-leaf"], ["power", 55], ["pokemon_id", 3], ["move_type", "grass"], ["pp", 25], ["accuracy", 95]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "solar-beam"], ["power", 120], ["pokemon_id", 3], ["move_type", "grass"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "poison-powder"], ["power", 0], ["pokemon_id", 3], ["move_type", "poison"], ["pp", 35], ["accuracy", 75]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "sleep-powder"], ["power", 0], ["pokemon_id", 3], ["move_type", "grass"], ["pp", 15], ["accuracy", 75]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "charmander"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "fire"], ["id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fire-punch"], ["power", 75], ["pokemon_id", 4], ["move_type", "fire"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "thunder-punch"], ["power", 75], ["pokemon_id", 4], ["move_type", "electric"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "scratch"], ["power", 40], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "swords-dance"], ["power", 0], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (70.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cut"], ["power", 50], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 30], ["accuracy", 95]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mega-kick"], ["power", 120], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 5], ["accuracy", 75]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "headbutt"], ["power", 70], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body-slam"], ["power", 85], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "take-down"], ["power", 90], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (23.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "double-edge"], ["power", 120], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "leer"], ["power", 0], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 30], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bite"], ["power", 60], ["pokemon_id", 4], ["move_type", "dark"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "growl"], ["power", 0], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 40], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ember"], ["power", 40], ["pokemon_id", 4], ["move_type", "fire"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "flamethrower"], ["power", 90], ["pokemon_id", 4], ["move_type", "fire"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "submission"], ["power", 80], ["pokemon_id", 4], ["move_type", "fighting"], ["pp", 20], ["accuracy", 80]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "counter"], ["power", 0], ["pokemon_id", 4], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "seismic-toss"], ["power", 0], ["pokemon_id", 4], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "strength"], ["power", 80], ["pokemon_id", 4], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "dragon-rage"], ["power", 0], ["pokemon_id", 4], ["move_type", "dragon"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fire-spin"], ["power", 35], ["pokemon_id", 4], ["move_type", "fire"], ["pp", 15], ["accuracy", 85]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "dig"], ["power", 80], ["pokemon_id", 4], ["move_type", "ground"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "toxic"], ["power", 0], ["pokemon_id", 4], ["move_type", "poison"], ["pp", 10], ["accuracy", 90]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "charmeleon"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "fire"], ["id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fire-punch"], ["power", 75], ["pokemon_id", 5], ["move_type", "fire"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "thunder-punch"], ["power", 75], ["pokemon_id", 5], ["move_type", "electric"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "scratch"], ["power", 40], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "swords-dance"], ["power", 0], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cut"], ["power", 50], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 30], ["accuracy", 95]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mega-kick"], ["power", 120], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 5], ["accuracy", 75]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "headbutt"], ["power", 70], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body-slam"], ["power", 85], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "take-down"], ["power", 90], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "double-edge"], ["power", 120], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (26.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "leer"], ["power", 0], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 30], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "growl"], ["power", 0], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 40], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (5.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ember"], ["power", 40], ["pokemon_id", 5], ["move_type", "fire"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "flamethrower"], ["power", 90], ["pokemon_id", 5], ["move_type", "fire"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "submission"], ["power", 80], ["pokemon_id", 5], ["move_type", "fighting"], ["pp", 20], ["accuracy", 80]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "counter"], ["power", 0], ["pokemon_id", 5], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "seismic-toss"], ["power", 0], ["pokemon_id", 5], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "strength"], ["power", 80], ["pokemon_id", 5], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "dragon-rage"], ["power", 0], ["pokemon_id", 5], ["move_type", "dragon"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fire-spin"], ["power", 35], ["pokemon_id", 5], ["move_type", "fire"], ["pp", 15], ["accuracy", 85]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "dig"], ["power", 80], ["pokemon_id", 5], ["move_type", "ground"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "charizard"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ?, "type2" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "flying"], ["type2", "fire"], ["id", 6]]
+  [1m[35m (27.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fire-punch"], ["power", 75], ["pokemon_id", 6], ["move_type", "fire"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "thunder-punch"], ["power", 75], ["pokemon_id", 6], ["move_type", "electric"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "scratch"], ["power", 40], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "swords-dance"], ["power", 0], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cut"], ["power", 50], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 30], ["accuracy", 95]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "wing-attack"], ["power", 60], ["pokemon_id", 6], ["move_type", "flying"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fly"], ["power", 90], ["pokemon_id", 6], ["move_type", "flying"], ["pp", 15], ["accuracy", 95]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mega-kick"], ["power", 120], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 5], ["accuracy", 75]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "headbutt"], ["power", 70], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body-slam"], ["power", 85], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "take-down"], ["power", 90], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "double-edge"], ["power", 120], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "leer"], ["power", 0], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 30], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "growl"], ["power", 0], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 40], ["accuracy", 100]]
+  [1m[35m (95.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "roar"], ["power", 0], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ember"], ["power", 40], ["pokemon_id", 6], ["move_type", "fire"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "flamethrower"], ["power", 90], ["pokemon_id", 6], ["move_type", "fire"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hyper-beam"], ["power", 150], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 5], ["accuracy", 90]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "submission"], ["power", 80], ["pokemon_id", 6], ["move_type", "fighting"], ["pp", 20], ["accuracy", 80]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "counter"], ["power", 0], ["pokemon_id", 6], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "seismic-toss"], ["power", 0], ["pokemon_id", 6], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "strength"], ["power", 80], ["pokemon_id", 6], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "solar-beam"], ["power", 120], ["pokemon_id", 6], ["move_type", "grass"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "dragon-rage"], ["power", 0], ["pokemon_id", 6], ["move_type", "dragon"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fire-spin"], ["power", 35], ["pokemon_id", 6], ["move_type", "fire"], ["pp", 15], ["accuracy", 85]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "earthquake"], ["power", 100], ["pokemon_id", 6], ["move_type", "ground"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fissure"], ["power", 0], ["pokemon_id", 6], ["move_type", "ground"], ["pp", 5], ["accuracy", 30]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "squirtle"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "water"], ["id", 7]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ice-punch"], ["power", 75], ["pokemon_id", 7], ["move_type", "ice"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mega-kick"], ["power", 120], ["pokemon_id", 7], ["move_type", "normal"], ["pp", 5], ["accuracy", 75]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "headbutt"], ["power", 70], ["pokemon_id", 7], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tackle"], ["power", 40], ["pokemon_id", 7], ["move_type", "normal"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body-slam"], ["power", 85], ["pokemon_id", 7], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "take-down"], ["power", 90], ["pokemon_id", 7], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "double-edge"], ["power", 120], ["pokemon_id", 7], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tail-whip"], ["power", 0], ["pokemon_id", 7], ["move_type", "normal"], ["pp", 30], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bite"], ["power", 60], ["pokemon_id", 7], ["move_type", "dark"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mist"], ["power", 0], ["pokemon_id", 7], ["move_type", "ice"], ["pp", 30], ["accuracy", 0]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "water-gun"], ["power", 40], ["pokemon_id", 7], ["move_type", "water"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hydro-pump"], ["power", 110], ["pokemon_id", 7], ["move_type", "water"], ["pp", 5], ["accuracy", 80]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "surf"], ["power", 90], ["pokemon_id", 7], ["move_type", "water"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ice-beam"], ["power", 90], ["pokemon_id", 7], ["move_type", "ice"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "blizzard"], ["power", 110], ["pokemon_id", 7], ["move_type", "ice"], ["pp", 5], ["accuracy", 70]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bubble-beam"], ["power", 65], ["pokemon_id", 7], ["move_type", "water"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "submission"], ["power", 80], ["pokemon_id", 7], ["move_type", "fighting"], ["pp", 20], ["accuracy", 80]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "counter"], ["power", 0], ["pokemon_id", 7], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "seismic-toss"], ["power", 0], ["pokemon_id", 7], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "strength"], ["power", 80], ["pokemon_id", 7], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "dig"], ["power", 80], ["pokemon_id", 7], ["move_type", "ground"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "toxic"], ["power", 0], ["pokemon_id", 7], ["move_type", "poison"], ["pp", 10], ["accuracy", 90]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "wartortle"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "water"], ["id", 8]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ice-punch"], ["power", 75], ["pokemon_id", 8], ["move_type", "ice"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mega-kick"], ["power", 120], ["pokemon_id", 8], ["move_type", "normal"], ["pp", 5], ["accuracy", 75]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "headbutt"], ["power", 70], ["pokemon_id", 8], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tackle"], ["power", 40], ["pokemon_id", 8], ["move_type", "normal"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body-slam"], ["power", 85], ["pokemon_id", 8], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "take-down"], ["power", 90], ["pokemon_id", 8], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "double-edge"], ["power", 120], ["pokemon_id", 8], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tail-whip"], ["power", 0], ["pokemon_id", 8], ["move_type", "normal"], ["pp", 30], ["accuracy", 100]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bite"], ["power", 60], ["pokemon_id", 8], ["move_type", "dark"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "water-gun"], ["power", 40], ["pokemon_id", 8], ["move_type", "water"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hydro-pump"], ["power", 110], ["pokemon_id", 8], ["move_type", "water"], ["pp", 5], ["accuracy", 80]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "surf"], ["power", 90], ["pokemon_id", 8], ["move_type", "water"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ice-beam"], ["power", 90], ["pokemon_id", 8], ["move_type", "ice"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "blizzard"], ["power", 110], ["pokemon_id", 8], ["move_type", "ice"], ["pp", 5], ["accuracy", 70]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bubble-beam"], ["power", 65], ["pokemon_id", 8], ["move_type", "water"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "submission"], ["power", 80], ["pokemon_id", 8], ["move_type", "fighting"], ["pp", 20], ["accuracy", 80]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "counter"], ["power", 0], ["pokemon_id", 8], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "seismic-toss"], ["power", 0], ["pokemon_id", 8], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "strength"], ["power", 80], ["pokemon_id", 8], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "blastoise"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "water"], ["id", 9]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ice-punch"], ["power", 75], ["pokemon_id", 9], ["move_type", "ice"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mega-kick"], ["power", 120], ["pokemon_id", 9], ["move_type", "normal"], ["pp", 5], ["accuracy", 75]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "headbutt"], ["power", 70], ["pokemon_id", 9], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tackle"], ["power", 40], ["pokemon_id", 9], ["move_type", "normal"], ["pp", 35], ["accuracy", 100]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body-slam"], ["power", 85], ["pokemon_id", 9], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "take-down"], ["power", 90], ["pokemon_id", 9], ["move_type", "normal"], ["pp", 20], ["accuracy", 85]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "double-edge"], ["power", 120], ["pokemon_id", 9], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (24.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tail-whip"], ["power", 0], ["pokemon_id", 9], ["move_type", "normal"], ["pp", 30], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bite"], ["power", 60], ["pokemon_id", 9], ["move_type", "dark"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "roar"], ["power", 0], ["pokemon_id", 9], ["move_type", "normal"], ["pp", 20], ["accuracy", 0]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "water-gun"], ["power", 40], ["pokemon_id", 9], ["move_type", "water"], ["pp", 25], ["accuracy", 100]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hydro-pump"], ["power", 110], ["pokemon_id", 9], ["move_type", "water"], ["pp", 5], ["accuracy", 80]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "surf"], ["power", 90], ["pokemon_id", 9], ["move_type", "water"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ice-beam"], ["power", 90], ["pokemon_id", 9], ["move_type", "ice"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "blizzard"], ["power", 110], ["pokemon_id", 9], ["move_type", "ice"], ["pp", 5], ["accuracy", 70]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bubble-beam"], ["power", 65], ["pokemon_id", 9], ["move_type", "water"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hyper-beam"], ["power", 150], ["pokemon_id", 9], ["move_type", "normal"], ["pp", 5], ["accuracy", 90]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "submission"], ["power", 80], ["pokemon_id", 9], ["move_type", "fighting"], ["pp", 20], ["accuracy", 80]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "counter"], ["power", 0], ["pokemon_id", 9], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "seismic-toss"], ["power", 0], ["pokemon_id", 9], ["move_type", "fighting"], ["pp", 20], ["accuracy", 100]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "strength"], ["power", 80], ["pokemon_id", 9], ["move_type", "normal"], ["pp", 15], ["accuracy", 100]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "earthquake"], ["power", 100], ["pokemon_id", 9], ["move_type", "ground"], ["pp", 10], ["accuracy", 100]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fissure"], ["power", 0], ["pokemon_id", 9], ["move_type", "ground"], ["pp", 5], ["accuracy", 30]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "front_sprite", "back_sprite") VALUES (?, ?, ?)[0m  [["name", "caterpie"], ["front_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"], ["back_sprite", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "pokemons" SET "type1" = ? WHERE "pokemons"."id" = ?[0m  [["type1", "bug"], ["id", 10]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "moves" ("name", "power", "pokemon_id", "move_type", "pp", "accuracy") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "string-shot"], ["power", 0], ["pokemon_id", 10], ["move_type", "bug"], ["pp", 40], ["accuracy", 95]]
+  [1m[35m (24.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (19.0ms)[0m  [1m[32mINSERT INTO "games" ("playername", "score") VALUES (?, ?)[0m  [["playername", "Red"], ["score", "1000"]]
+  [1m[35m (151.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "games" ("playername", "score") VALUES (?, ?)[0m  [["playername", "Blue"], ["score", "2000"]]
+  [1m[35m (64.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:57:04 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MovesController#index as HTML
+  [1m[36mMove Load (1.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 136ms (Views: 87.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/pokemons" for 127.0.0.1 at 2018-04-18 17:57:24 -0400
+Started GET "/api/v1/moves" for 127.0.0.1 at 2018-04-18 17:57:24 -0400
+Processing by Api::V1::MovesController#index as */*
+  [1m[36mMove Load (1.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves"[0m
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 1.7ms)
+
+
+Processing by Api::V1::PokemonsController#index as */*
+Started GET "/api/v1/games" for 127.0.0.1 at 2018-04-18 17:57:24 -0400
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+Processing by Api::V1::GamesController#index as */*
+Completed 200 OK in 68ms (Views: 12.1ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 26ms (Views: 9.2ms | ActiveRecord: 0.8ms)
+
+

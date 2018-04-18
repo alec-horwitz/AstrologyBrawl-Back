@@ -27,9 +27,9 @@ initial_seed.each do |index|
   moves_to_grab = (pokemon_parsed["moves"].size*0.25).floor
   [*1..moves_to_grab].each do |i|
     move_parsed = JSON.parse(RestClient.get("https://pokeapi.co/api/v2/move/#{pokemon_parsed["moves"][i]["move"]["name"]}"))
-    move = Move.create(name: move_parsed["name"], pp: move_parsed["pp"], move_type: move_parsed["type"]["name"], pokemon: pokemon)
-    move.update(power: 0) if move_parsed["power"] == nil
-    move.update(accuracy: 0) if move_parsed["accuracy"] == nil
+    move_parsed["power"] == nil ? power = 0 : power = move_parsed["power"]
+    move_parsed["accuracy"] == nil ? accuracy = 0 : accuracy = move_parsed["accuracy"]
+    move = Move.create(name: move_parsed["name"], pp: move_parsed["pp"], move_type: move_parsed["type"]["name"], pokemon: pokemon, accuracy: accuracy, power: power)
   end
 end
 
