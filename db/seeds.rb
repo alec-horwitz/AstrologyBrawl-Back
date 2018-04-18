@@ -12,16 +12,23 @@ require 'json'
 
 Pokemon.destroy_all
 Move.destroy_all
+Game.destroy_all
 
 initial_seed = [*1..10]
 
 initial_seed.each do |index|
   pokemon_parsed = JSON.parse(RestClient.get("https://pokeapi.co/api/v2/pokemon/#{index}"))
   pokemon = Pokemon.create(name: pokemon_parsed["name"], front_sprite: pokemon_parsed["sprites"]["front_default"], back_sprite: pokemon_parsed["sprites"]["back_default"])
-    [*1..2].each do |i|
-      move_parsed = JSON.parse(RestClient.get("https://pokeapi.co/api/v2/move/#{i}"))
-      move = Move.create(name: move_parsed["name"], power: move_parsed["power"], pokemon: pokemon)
-    end
+  if pokemon_parsed["types"].size > 1
+    pokemon.update(type1: pokemon_parsed["types"][0]["type"]["name"], type2: pokemon_parsed["types"][1]["type"]["name"])
+  else
+    pokemon.update(type1: pokemon_parsed["types"][0]["type"]["name"])
+  end
+  moves_to_grab = (pokemon_parsed["moves"].size*0.25).floor
+  [*1..moves_to_grab].each do |i|
+    move_parsed = JSON.parse(RestClient.get("https://pokeapi.co/api/v2/move/#{pokemon_parsed["moves"][i]["move"]["name"]}"))
+    move = Move.create(name: move_parsed["name"], power: move_parsed["power"], pp: move_parsed["pp"], accuracy: move_parsed["accuracy"], move_type: move_parsed["type"]["name"], pokemon: pokemon)
+  end
 end
 
 Game.create(playername: "Red", score: 1000)
