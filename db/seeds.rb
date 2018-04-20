@@ -10,11 +10,11 @@
 require 'rest-client'
 require 'json'
 
-Pokemon.destroy_all
-Move.destroy_all
+# Pokemon.destroy_all
+# Move.destroy_all
 Game.destroy_all
 
-initial_seed = [*1..10]
+initial_seed = [*102..151]
 
 initial_seed.each do |index|
   pokemon_parsed = JSON.parse(RestClient.get("https://pokeapi.co/api/v2/pokemon/#{index}"))
