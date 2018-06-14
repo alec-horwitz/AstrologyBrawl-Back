@@ -6,32 +6,25 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 require 'rest-client'
 require 'json'
 
-# Pokemon.destroy_all
-# Move.destroy_all
-Game.destroy_all
+stockAvatar = "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-business-bear.png"
+stockMain = 15
+stockAttack = 5
+stockDefence = 5
+types = ["earth", "air", "fire", "water"]
+stockUsernames = ["HellGaze492", "RedGhost11", "Leo-E", "Moxareck", "CyberCat<(^.^<)", "ProfaneFontain", "No.3037"]
 
-initial_seed = [*102..151]
+# User.destroy_all
+# Game.destroy_all
 
-initial_seed.each do |index|
-  pokemon_parsed = JSON.parse(RestClient.get("https://pokeapi.co/api/v2/pokemon/#{index}"))
-  pokemon = Pokemon.create(name: pokemon_parsed["name"], front_sprite: pokemon_parsed["sprites"]["front_default"], back_sprite: pokemon_parsed["sprites"]["back_default"])
-  if pokemon_parsed["types"].size > 1
-    pokemon.update(type1: pokemon_parsed["types"][0]["type"]["name"], type2: pokemon_parsed["types"][1]["type"]["name"])
-  else
-    pokemon.update(type1: pokemon_parsed["types"][0]["type"]["name"])
+stockUsernames.each { |username|
+  User.create(name: username, avatar: stockAvatar, main: stockMain, attack: stockAttack, defence: stockDefence, type1: types[Random.rand(0...4)], type2: types[Random.rand(0...4)], type3: types[Random.rand(0...4)])
+}
+
+User.all.each { |user|
+  Random.rand(1...6).times do
+    Game.create(user_id: user.id, playername: user.name, score: Random.rand(1...1000))
   end
-  moves_to_grab = (pokemon_parsed["moves"].size*0.25).floor
-  [*1..moves_to_grab].each do |i|
-    move_parsed = JSON.parse(RestClient.get("https://pokeapi.co/api/v2/move/#{pokemon_parsed["moves"][i]["move"]["name"]}"))
-    move_parsed["power"] == nil ? power = 0 : power = move_parsed["power"]
-    move_parsed["accuracy"] == nil ? accuracy = 0 : accuracy = move_parsed["accuracy"]
-    move = Move.create(name: move_parsed["name"], pp: move_parsed["pp"], move_type: move_parsed["type"]["name"], pokemon: pokemon, accuracy: accuracy, power: power)
-  end
-end
-
-Game.create(playername: "Red", score: 1000)
-Game.create(playername: "Blue", score: 2000)
+}

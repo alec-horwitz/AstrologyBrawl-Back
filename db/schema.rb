@@ -10,28 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180418212307) do
+ActiveRecord::Schema.define(version: 20180416175657) do
 
   create_table "games", force: :cascade do |t|
+    t.integer "user_id"
     t.string "playername"
     t.string "score"
+    t.string "mod0"
+    t.string "mod1"
+    t.string "mod2"
+    t.string "mod3"
+    t.string "mod4"
+    t.string "mod5"
+    t.string "mod6"
+    t.string "mod7"
+    t.string "mod8"
+    t.string "mod9"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "moves", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "power"
-    t.integer "pokemon_id"
-    t.string "move_type"
-    t.integer "pp"
-    t.integer "accuracy"
-  end
-
-  create_table "pokemons", force: :cascade do |t|
-    t.string "name"
-    t.string "front_sprite"
-    t.string "back_sprite"
-    t.string "type1", default: ""
-    t.string "type2", default: ""
+    t.string "password"
+    t.string "email"
+    t.string "avatar", default: "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-business-bear.png"
+    t.string "main"
+    t.string "attack"
+    t.string "defence"
+    t.string "type1"
+    t.string "type2"
+    t.string "type3"
+    t.string "level"
+    t.string "experience"
+    t.string "points"
+    t.string "score"
+    t.string "mod0"
+    t.string "mod1"
+    t.string "mod2"
+    t.string "mod3"
+    t.string "mod4"
+    t.string "mod5"
+    t.string "mod6"
+    t.string "mod7"
+    t.string "mod8"
+    t.string "mod9"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
