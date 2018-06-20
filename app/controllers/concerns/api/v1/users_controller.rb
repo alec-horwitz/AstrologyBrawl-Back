@@ -30,7 +30,7 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:name, :password, :avatar, :attack, :defence, :type1, :type2, :type3)
+    params.permit(:name, :password, :avatar, :main, :attack, :defence, :type1, :type2, :type3)
   end
 
   def set_user
