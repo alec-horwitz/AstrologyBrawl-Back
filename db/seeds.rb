@@ -29,11 +29,11 @@ stockMain = 15
 stockAttack = 5
 stockDefence = 5
 types = ["earth", "air", "fire", "water"]
-stockUsernames = ["Moxareck", "AstroMonkey77", "ProfaneFontain", "GreenRanger19", "CyberCat<(^.^<)", "Alec", "No.3037","64BitRick","Leo-E","Jesse","HellGaze451","RedGhost11"]
+stockUsernames = ["Moxareck", "AstroMonkey77", "ProfaneFontaine", "GreenRanger19", "CyberCat<(^.^<)", "Alec", "No.3037","64BitRick","Leo-E","test","HellGaze451","RedGhost11"]
 
 index = 0
 stockAvatars.each { |avatar, element|
-  User.create(name: stockUsernames[index], password: "test123", avatar: avatar, main: stockMain, attack: stockAttack, defence: stockDefence, type1: element, type2: types[Random.rand(0...4)], type3: types[Random.rand(0...4)])
+  User.create(name: stockUsernames[index], password: "test", avatar: avatar, main: stockMain, attack: stockAttack, defence: stockDefence, type1: element, type2: types[Random.rand(0...4)], type3: types[Random.rand(0...4)])
   index = index + 1
 }
 
