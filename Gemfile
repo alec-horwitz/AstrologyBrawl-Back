@@ -26,7 +26,7 @@ gem 'puma', '~> 3.7'
 gem 'rack-cors'
 gem 'rest-client'
 gem 'pry'
-gem 'postgres'
+gem 'pg'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
