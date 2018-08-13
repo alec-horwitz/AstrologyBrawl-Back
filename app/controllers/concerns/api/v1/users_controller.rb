@@ -13,6 +13,9 @@ class Api::V1::UsersController < ApplicationController
 
   def showRandom
     index = Random.rand(User.all.length)
+    while User.all[index] == @user
+      index = Random.rand(User.all.length)
+    end
     user = User.all[index]
     render json: user, status: 200
   end

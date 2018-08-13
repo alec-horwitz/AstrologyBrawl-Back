@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get '/users/random', to: 'users#showRandom'
+      get '/users/random/:id', to: 'users#showRandom'
       resources :users
       resources :games
     end
