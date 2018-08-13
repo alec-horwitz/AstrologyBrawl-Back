@@ -11,6 +11,12 @@ class Api::V1::UsersController < ApplicationController
     render json: @user, status: 200
   end
 
+  def showRandom
+    index = Random.rand(User.all.length)
+    user = User.all[index]
+    render json: user, status: 200
+  end
+
   def create
     user = User.create(user_params)
     render json: user, status: 201
