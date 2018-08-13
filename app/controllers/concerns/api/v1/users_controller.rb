@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :set_user, only: [:show,:update,:destroy]
+  before_action :set_user, only: [:showRandom, :show,:update,:destroy]
   before_action :user_params, only: [:create,:update]
 
   def index
