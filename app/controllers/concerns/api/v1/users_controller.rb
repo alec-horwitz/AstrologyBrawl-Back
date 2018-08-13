@@ -13,7 +13,7 @@ class Api::V1::UsersController < ApplicationController
 
   def showRandom
     index = Random.rand(User.all.length)
-    while User.all[index] == @user
+    while index == params[:id]
       index = Random.rand(User.all.length)
     end
     user = User.all[index]
