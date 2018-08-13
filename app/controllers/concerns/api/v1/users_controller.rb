@@ -12,7 +12,6 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def showRandom
-    byebug
     allUsers = User.all.select { |opponent| opponent.id != @user.id }
     opponent = allUsers[Random.rand(allUsers.length)]
     render json: opponent, status: 200
