@@ -12,12 +12,12 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def showRandom
-    allUsers = User.all.select { |user|
-      user.id != params[:id]
+    allUsers = User.all.select { |opponent|
+      opponent.id != @user.id
     }
     index = Random.rand(allUsers.length)
-    user = allUsers[index]
-    render json: user, status: 200
+    opponent = allUsers[index]
+    render json: opponent, status: 200
   end
 
   def create
