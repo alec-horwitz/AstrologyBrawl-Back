@@ -13,11 +13,8 @@ class Api::V1::UsersController < ApplicationController
 
   def showRandom
     byebug
-    allUsers = User.all.select { |opponent|
-      opponent.id != @user.id
-    }
-    index = Random.rand(allUsers.length)
-    opponent = allUsers[index]
+    allUsers = User.all.select { |opponent| opponent.id != @user.id }
+    opponent = allUsers[Random.rand(allUsers.length)]
     render json: opponent, status: 200
   end
 
