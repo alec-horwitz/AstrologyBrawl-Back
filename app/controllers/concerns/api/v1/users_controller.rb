@@ -17,6 +17,12 @@ class Api::V1::UsersController < ApplicationController
     render json: opponent, status: 200
   end
 
+  def showUser
+    matchedUserNames = User.all.select { |userName| userName.name == params[:username] }
+    matchedUsers = matchedUsersByName.select { |userPassword| userPassword.password == params[:password]}
+    render json: matchedUsers[0], status: 200
+  end
+
   def create
     user = User.create(user_params)
     render json: user, status: 201
