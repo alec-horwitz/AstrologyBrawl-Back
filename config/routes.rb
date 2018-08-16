@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get '/users/random/:id', to: 'users#showRandom'
       get '/users/login/:username/:password', to: 'users#showUser'
       resources :users
+      get '/games/pages/:page', to: 'games#showPage'
       resources :games
     end
   end

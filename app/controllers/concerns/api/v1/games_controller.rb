@@ -7,6 +7,20 @@ class Api::V1::GamesController < ApplicationController
     render json: games, status: 200
   end
 
+  def showPage
+    if params[:page]*10 != 0
+      startIndex = ((params[:page]*10)-1)
+      endIndex = startIndex + 10
+    else
+      startIndex = 0
+      endIndex = 9
+    end
+
+    games = Game.all[startIndex, endIndex]
+
+    render json: games, status: 200
+  end
+
   def show
     render json: @game, status: 200
   end
