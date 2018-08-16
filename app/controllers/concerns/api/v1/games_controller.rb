@@ -8,8 +8,8 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def showPage
-    if params[:page]*10 != 0
-      startIndex = ((params[:page]*10)-1)
+    if params[:page].to_i*10 != 0
+      startIndex = ((params[:page].to_i*10)-1)
       endIndex = startIndex + 10
     else
       startIndex = 0
