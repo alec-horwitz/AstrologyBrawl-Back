@@ -13,10 +13,8 @@ class Api::V1::GamesController < ApplicationController
     else
       startIndex = 0
     end
-    endIndex = startIndex + 9
 
-    games = Game.all[startIndex, endIndex]
-
+    games = Game.all[startIndex, 10]
     render json: games, status: 200
   end
 
