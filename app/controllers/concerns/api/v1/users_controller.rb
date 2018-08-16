@@ -18,8 +18,8 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def showUser
-    matchedUserNames = User.all.select { |userName| userName.name.downcase == params[:username].downcase }
-    matchedUsers = matchedUserNames.select { |userPassword| userPassword.password.downcase == params[:password].downcase}
+    matchedUserNames = User.all.select { |userName| userName.name == params[:username] }
+    matchedUsers = matchedUserNames.select { |userPassword| userPassword.password == params[:password]}
     render json: matchedUsers[0], status: 200
   end
 
