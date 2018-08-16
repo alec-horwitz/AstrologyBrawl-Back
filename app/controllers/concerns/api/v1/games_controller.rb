@@ -10,11 +10,10 @@ class Api::V1::GamesController < ApplicationController
   def showPage
     if params[:page].to_i*10 != 0
       startIndex = (params[:page].to_i*10)
-      endIndex = startIndex + 10
     else
       startIndex = 0
-      endIndex = 9
     end
+    endIndex = startIndex + 9
 
     games = Game.all[startIndex, endIndex]
 
