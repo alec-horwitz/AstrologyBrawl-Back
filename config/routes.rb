@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get '/users/login/:username/:password', to: 'users#showUser'
       resources :users
       get '/games/pages/:page', to: 'games#showPage'
+      get '/games/pages', to: 'games#showNumPages'
       resources :games
     end
   end

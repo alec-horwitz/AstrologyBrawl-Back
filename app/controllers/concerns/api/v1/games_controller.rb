@@ -18,6 +18,16 @@ class Api::V1::GamesController < ApplicationController
     render json: games, status: 200
   end
 
+  def showNumPages
+    if Game.all.length == 0
+      pages = Game.all.length/10
+    else
+      pages = (Game.all.length-1)/10
+    end
+
+    render json: pages, status: 200
+  end
+
   def show
     render json: @game, status: 200
   end
