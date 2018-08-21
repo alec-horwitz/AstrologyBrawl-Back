@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/users/random/:id', to: 'users#showRandom'
       get '/users/login/:username/:password', to: 'users#showUser'
-      get '/users/signup/:username', to: 'users#userConfirm'
       resources :users
       get '/games/pages/:page', to: 'games#showPage'
       get '/games/pages', to: 'games#showNumPages'

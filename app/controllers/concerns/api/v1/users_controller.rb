@@ -23,18 +23,13 @@ class Api::V1::UsersController < ApplicationController
     render json: matchedUsers[0], status: 200
   end
 
-  def userConfirm
-    matchedUserNames = User.all.select { |userName| userName.name.downcase == params[:username].downcase }
-    if matchedUserNames[0]
-      resp = 1
-    else
-      resp = 0
-    end
-    render json: resp, status: 200
-  end
-
   def create
-    user = User.create(user_params)
+    matchedUserNames = User.all.select { |userName| userName.name.downcase == params[:name].downcase }
+    if matchedUserNames[0]
+      user = nil
+    else
+      user = User.create(user_params)
+    end
     render json: user, status: 201
   end
 
