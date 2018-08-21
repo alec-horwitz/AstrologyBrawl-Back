@@ -23,6 +23,16 @@ class Api::V1::UsersController < ApplicationController
     render json: matchedUsers[0], status: 200
   end
 
+  def userConfirm
+    matchedUserNames = User.all.select { |userName| userName.name == params[:username] }
+    if matchedUserNames[0]
+      resp = 1
+    else
+      resp = 0
+    end
+    render json: resp, status: 200
+  end
+
   def create
     user = User.create(user_params)
     render json: user, status: 201
