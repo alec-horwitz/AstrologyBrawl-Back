@@ -24,7 +24,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def userConfirm
-    matchedUserNames = User.all.select { |userName| userName.name == params[:username] }
+    matchedUserNames = User.all.select { |userName| userName.name.downcase == params[:username].downcase }
     if matchedUserNames[0]
       resp = 1
     else
