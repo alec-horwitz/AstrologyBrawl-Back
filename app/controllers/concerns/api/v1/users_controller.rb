@@ -29,6 +29,7 @@ class Api::V1::UsersController < ApplicationController
       user = nil
     else
       user = User.create(user_params)
+      user[:token] = generate_token(user)
     end
     render json: user, status: 201
   end
@@ -45,6 +46,12 @@ class Api::V1::UsersController < ApplicationController
   end
 
   private
+
+  def generate_token(user)
+    user_id = user.id
+    JWT.encode({ user_id: user_id }, "super", "HS256" )
+
+  end
 
   def user_params
     params.permit(:name, :password, :avatar, :main, :attack, :defence, :type1, :type2, :type3)
