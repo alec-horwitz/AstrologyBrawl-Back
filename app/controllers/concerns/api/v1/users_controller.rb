@@ -40,7 +40,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    matchedUserNames = User.all.select { |userName| userName.name.downcase == params[:name].downcase }
+    matchedUserNames = User.all.select { |userName| userName.name.downcase == user_params[:name].downcase }
     if matchedUserNames[0]
       user = nil
     else

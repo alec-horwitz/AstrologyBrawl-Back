@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  
+
   def token_json(user)
     {
       username: user.username,
@@ -16,7 +16,7 @@ class ApplicationController < ActionController::API
   def try_decode_token
     token = request.headers["Authorization"]
     begin
-      decoded = JWT.decode(token, ENV["JWT_PASSWORD"], true, { algorithm: 'Hs256' })
+      decoded = JWT.decode(token, ENV["JWT_PASSWORD"], true, { algorithm: 'HS256' })
     rescue JWT::VerificationError
       return nil
     end
