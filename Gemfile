@@ -50,3 +50,5 @@ gem "dotenv-rails", "~> 2.5"
 
 
 gem "jwt", "~> 2.1"
+
+gem 'dotenv-heroku'
