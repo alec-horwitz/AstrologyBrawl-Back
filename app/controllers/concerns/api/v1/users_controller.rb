@@ -3,24 +3,40 @@ class Api::V1::UsersController < ApplicationController
   before_action :user_params, only: [:create,:update]
 
   def index
-    users = User.all
-    render json: users, status: 200
+    if (authorized?(@user))
+      users = User.all
+      render json: users, status: 200
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   def show
-    render json: @user, status: 200
+    if (authorized?(@user))
+      render json: @user, status: 200
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   def showRandom
-    allUsers = User.all.select { |opponent| opponent.id != @user.id }
-    opponent = allUsers[Random.rand(allUsers.length)]
-    render json: opponent, status: 200
+    if (authorized?(@user))
+      allUsers = User.all.select { |opponent| opponent.id != @user.id }
+      opponent = allUsers[Random.rand(allUsers.length)]
+      render json: opponent, status: 200
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   def showUser
-    matchedUserNames = User.all.select { |userName| userName.name == params[:username] }
-    matchedUsers = matchedUserNames.select { |userPassword| userPassword.password == params[:password]}
-    render json: matchedUsers[0], status: 200
+    if (authorized?(@user))
+      matchedUserNames = User.all.select { |userName| userName.name == params[:username] }
+      matchedUsers = matchedUserNames.select { |userPassword| userPassword.password == params[:password]}
+      render json: matchedUsers[0], status: 200
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   def create
@@ -35,23 +51,25 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
-    @user.update(user_params)
-    render json: @user, status: 200
+    if (authorized?(@user))
+      @user.update(user_params)
+      render json: @user, status: 200
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   def destroy
-    userDestroied = @user
-    @user.destroy
-    render json: userDestroied
+    if (authorized?(@user))
+      userDestroied = @user
+      @user.destroy
+      render json: userDestroied
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   private
-
-  def generate_token(user)
-    user_id = user.id
-    JWT.encode({ user_id: user_id }, "super", "HS256" )
-
-  end
 
   def user_params
     params.permit(:name, :password, :avatar, :main, :attack, :defence, :type1, :type2, :type3)

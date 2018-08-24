@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get '/games/pages/:page', to: 'games#showPage'
       get '/games/pages', to: 'games#showNumPages'
       resources :games
+      post '/sessions/', to: 'sessions#create'
     end
   end
 

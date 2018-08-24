@@ -3,49 +3,78 @@ class Api::V1::GamesController < ApplicationController
   before_action :game_params, only: [:create,:update]
 
   def index
-    games = Game.all
-    render json: games, status: 200
+    if (valid_token?)
+      games = Game.all
+      render json: games, status: 200
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   def showPage
-    if params[:page].to_i*10 != 0
-      startIndex = (params[:page].to_i*10)
+    if (valid_token?)
+      if params[:page].to_i*10 != 0
+        startIndex = (params[:page].to_i*10)
+        games = Game.all[startIndex, 10]
+      else
+        startIndex = 0
+        games = Game.all[startIndex, 10]
+      end
+      render json: games, status: 200
     else
-      startIndex = 0
+      render json: nil, status: :unauthorized
     end
 
-    games = Game.all[startIndex, 10]
-    render json: games, status: 200
   end
 
   def showNumPages
-    if Game.all.length == 0
-      pages = Game.all.length/10
-    else
-      pages = (Game.all.length-1)/10
-    end
+    if (valid_token?)
+      if Game.all.length == 0
+        pages = Game.all.length/10
+      else
+        pages = (Game.all.length-1)/10
+      end
 
-    render json: pages, status: 200
+      render json: pages, status: 200
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   def show
-    render json: @game, status: 200
+    if (valid_token?)
+      render json: @game, status: 200
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   def create
-    game = Game.create(game_params)
-    render json: game, status: 201
+    if (valid_token?)
+      game = Game.create(game_params)
+      render json: game, status: 201
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   def update
-    @game.update(game_params)
-    render json: @game, status: 200
+    if (valid_token?)
+      @game.update(game_params)
+      render json: @game, status: 200
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   def destroy
-    gameDestroied = @game
-    @game.destroy
-    render json: gameDestroied
+    if (valid_token?)
+      gameDestroied = @game
+      @game.destroy
+      render json: gameDestroied
+    else
+      render json: nil, status: :unauthorized
+    end
   end
 
   private
