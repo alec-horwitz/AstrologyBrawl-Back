@@ -31,7 +31,7 @@ class Api::V1::UsersController < ApplicationController
 
   def showUser
     if (authorized?(@user))
-      matchedUserNames = User.all.select { |userName| userName.name == params[:username] }
+      matchedUserNames = User.all.select { |userName| userName.name == params[:name] }
       matchedUsers = matchedUserNames.select { |userPassword| userPassword.password == params[:password]}
       render json: matchedUsers[0], status: 200
     else
