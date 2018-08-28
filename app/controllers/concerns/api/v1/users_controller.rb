@@ -47,10 +47,12 @@ class Api::V1::UsersController < ApplicationController
     else
       user = User.create(user_params)
       if user.id == nil
+        p "---###---user id is nil---###---"
+        p user
         user = nil
       else
         user[:token] = generate_token(user)
-        p "I have arrived in the else"
+        p "---###---I have arrived in the else---###---"
         p user
       end
     end
