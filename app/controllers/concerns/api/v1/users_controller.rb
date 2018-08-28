@@ -42,6 +42,7 @@ class Api::V1::UsersController < ApplicationController
   def create
     # user_params = {name:"Test3", password:"test123", avatar:"https://1.bp.blogspot.com/-vRML1Dg9ECg/UWg6fAv0EcI/AAAAAAAAFFo/3WaNG6V8j9s/s1600/zodiac1+capricorn.jpg", main:"15", attack:"5", defence:"5", type1:"earth", type2:"water", type3:"air"}
     matchedUserNames = User.all.select { |userName| userName.name.downcase == user_params[:name].downcase }
+    token = nil
     if matchedUserNames[0]
       user = nil
     else
@@ -51,12 +52,12 @@ class Api::V1::UsersController < ApplicationController
         p user
         user = nil
       else
-        user[:token] = generate_token(user)
+        token = generate_token(user)
         p "---###---I have arrived in the else---###---"
         p user
       end
     end
-    render json: user, status: 201
+    render json: {user: user, token: token}, status: 201
   end
 
   def update
