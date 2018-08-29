@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/users/random/:id', to: 'users#showRandom'
-      get '/users/login/:username/:password', to: 'users#showUser'
+      # get '/users/login/:username/:password', to: 'users#showUser'
       resources :users
       get '/games/pages/:page', to: 'games#showPage'
       get '/games/pages', to: 'games#showNumPages'

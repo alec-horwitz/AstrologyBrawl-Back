@@ -2,8 +2,7 @@ class ApplicationController < ActionController::API
 
   def token_json(user)
     {
-      username: user.name,
-      user_id: user.id,
+      user: user,
       token: generate_token(user)
     }
   end
