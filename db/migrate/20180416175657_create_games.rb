@@ -2,7 +2,15 @@ class CreateGames < ActiveRecord::Migration[5.1]
   def change
     create_table :games do |t|
       t.integer :user_id
-      t.string :playername
+      t.integer :winner_id
+      t.string :winner_health
+      t.string :winner_mod
+      t.integer :loser_id
+      t.string :loser_health
+      t.string :loser_mod
+      t.string :killing_blow
+      t.string :game_mod
+      t.string :arena, default: "https://il6.picdn.net/shutterstock/videos/711148/thumb/1.jpg"
       t.string :score
       t.string :mod0
       t.string :mod1

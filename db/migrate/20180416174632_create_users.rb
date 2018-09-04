@@ -5,9 +5,14 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :password_digest
       t.string :email
       t.string :avatar, default: "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-business-bear.png"
+      t.string :sub_avatar1, default: "http://downloadicons.net/sites/default/files/exclamation-warning-icon-91894.png"
+      t.string :sub_avatar2, default: "http://downloadicons.net/sites/default/files/exclamation-warning-icon-91894.png"
       t.string :main
       t.string :attack
       t.string :defence
+      t.string :sign1
+      t.string :sign2
+      t.string :sign3
       t.string :type1
       t.string :type2
       t.string :type3
@@ -15,6 +20,16 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :experience
       t.string :points
       t.string :score
+      t.string :slot0
+      t.string :slot1
+      t.string :slot2
+      t.string :slot3
+      t.string :slot4
+      t.string :slot5
+      t.string :slot6
+      t.string :slot7
+      t.string :slot8
+      t.string :slot9
       t.string :mod0
       t.string :mod1
       t.string :mod2
