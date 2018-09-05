@@ -46,7 +46,14 @@ class Api::V1::UsersController < ApplicationController
     if matchedUserNames[0]
       user = nil
     else
-      user = User.create(user_params)
+      user = User.create(user_params.merge({
+        status: "Your Turn",
+        animation: "pulse",
+        visible: "true",
+        hp: "100",
+        defending: "false",
+        charged: "false"
+        }))
       if user.id == nil
         user = nil
       else
