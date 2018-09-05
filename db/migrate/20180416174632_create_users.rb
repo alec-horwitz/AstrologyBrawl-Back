@@ -21,6 +21,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :experience
       t.string :points
       t.string :score
+      t.string :inventory
       t.string :slot0
       t.string :slot1
       t.string :slot2
@@ -43,11 +44,12 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :mod9
       t.string :status, default: "Your Turn"
       t.string :animation, default: "pulse"
-      t.string :visible, default: true
-      t.string :hp, default: 100
-      t.string :defending, default: false
-      t.string :charged, default: false
-      t.string :action, default: "Attacking"
+      t.string :visible, default: "true"
+      t.string :hp, default: "100"
+      t.string :defending, default: "false"
+      t.string :charged, default: "false"
+      t.string :action
+      t.string :active_slot, default: "0"
       t.timestamps
     end
   end
