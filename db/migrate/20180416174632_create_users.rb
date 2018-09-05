@@ -17,6 +17,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :type2
       t.string :type3
       t.string :level
+      t.string :health
       t.string :experience
       t.string :points
       t.string :score
@@ -40,6 +41,13 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :mod7
       t.string :mod8
       t.string :mod9
+      t.string :status, default: "Your Turn"
+      t.string :animation, default: "pulse"
+      t.string :visible, default: true
+      t.string :hp, default: 100
+      t.string :defending, default: false
+      t.string :charged, default: false
+      t.string :action, default: "Attacking"
       t.timestamps
     end
   end

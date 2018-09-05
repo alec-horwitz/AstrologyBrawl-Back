@@ -3,9 +3,13 @@ class CreateGames < ActiveRecord::Migration[5.1]
     create_table :games do |t|
       t.integer :user_id
       t.integer :winner_id
+      t.string :winner
+      t.string :winner_name
       t.string :winner_health
       t.string :winner_mod
       t.integer :loser_id
+      t.string :loser
+      t.string :loser_name
       t.string :loser_health
       t.string :loser_mod
       t.string :killing_blow
