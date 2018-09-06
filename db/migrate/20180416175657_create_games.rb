@@ -2,12 +2,12 @@ class CreateGames < ActiveRecord::Migration[5.1]
   def change
     create_table :games do |t|
       t.integer :user_id
-      t.string :winner_id
+      t.integer :winner_id
       t.string :winner
       t.string :winner_name
       t.string :winner_health
       t.string :winner_mod
-      t.string :loser_id
+      t.integer :loser_id
       t.string :loser
       t.string :loser_name
       t.string :loser_health

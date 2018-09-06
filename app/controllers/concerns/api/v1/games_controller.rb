@@ -13,12 +13,13 @@ class Api::V1::GamesController < ApplicationController
 
   def showPage
     if (valid_token?)
+      sortedGames = Game.all.sort_by(&:score).reverse
       if params[:page].to_i*10 != 0
         startIndex = (params[:page].to_i*10)
-        games = Game.all[startIndex, 10]
+        games = sortedGames[startIndex, 10]
       else
         startIndex = 0
-        games = Game.all[startIndex, 10]
+        games = sortedGames[startIndex, 10]
       end
       render json: games, status: 200
     else
