@@ -59,14 +59,14 @@ class Api::V1::GamesController < ApplicationController
     end
   end
 
-  def update
-    if (valid_token?)
-      @game.update(game_params)
-      render json: @game, status: 200
-    else
-      render json: nil, status: :unauthorized
-    end
-  end
+  # def update
+  #   if (valid_token?)
+  #     @game.update(game_params)
+  #     render json: @game, status: 200
+  #   else
+  #     render json: nil, status: :unauthorized
+  #   end
+  # end
 
   # def destroy
   #   if (valid_token?)
