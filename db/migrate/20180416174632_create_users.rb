@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :avatar, default: "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-business-bear.png"
       t.string :sub_avatar1, default: "http://downloadicons.net/sites/default/files/exclamation-warning-icon-91894.png"
       t.string :sub_avatar2, default: "http://downloadicons.net/sites/default/files/exclamation-warning-icon-91894.png"
+      t.string :sub_avatar3, default: "http://downloadicons.net/sites/default/files/exclamation-warning-icon-91894.png"
       t.string :main
       t.string :attack
       t.string :defence

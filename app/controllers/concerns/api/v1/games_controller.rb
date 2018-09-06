@@ -2,14 +2,14 @@ class Api::V1::GamesController < ApplicationController
   before_action :set_game, only: [:show,:update,:destroy]
   before_action :game_params, only: [:create,:update]
 
-  def index
-    if (valid_token?)
-      games = Game.all
-      render json: games, status: 200
-    else
-      render json: nil, status: :unauthorized
-    end
-  end
+  # def index
+  #   if (valid_token?)
+  #     games = Game.all
+  #     render json: games, status: 200
+  #   else
+  #     render json: nil, status: :unauthorized
+  #   end
+  # end
 
   def showPage
     if (valid_token?)
@@ -67,15 +67,15 @@ class Api::V1::GamesController < ApplicationController
     end
   end
 
-  def destroy
-    if (valid_token?)
-      gameDestroied = @game
-      @game.destroy
-      render json: gameDestroied
-    else
-      render json: nil, status: :unauthorized
-    end
-  end
+  # def destroy
+  #   if (valid_token?)
+  #     gameDestroied = @game
+  #     @game.destroy
+  #     render json: gameDestroied
+  #   else
+  #     render json: nil, status: :unauthorized
+  #   end
+  # end
 
   private
 
