@@ -81,7 +81,7 @@ class Api::V1::GamesController < ApplicationController
   private
 
   def game_params
-   params.permit(:winner_name, :score, :user_id)
+   params.permit(:score, :user_id, :winner_id, :winner, :winner_name, :winner_health, :winner_mod, :loser_id, :loser, :loser_name, :loser_health, :loser_mod)
   end
 
   def set_game
