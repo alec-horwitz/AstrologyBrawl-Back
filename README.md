@@ -1,24 +1,14 @@
-# README
+Instuctions:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Fork this repository and clone it to your computer.
 
-Things you may want to cover:
+Open up a terminal window and do the following:
 
-* Ruby version
+Navigate to the root directory and run the following commands:
 
-* System dependencies
+* bundle install
+* rails db:migrate
+* rails db:reset
+* rails s
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Make sure it is running on port 3000

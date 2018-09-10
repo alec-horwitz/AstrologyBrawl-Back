@@ -39,6 +39,6 @@ stockAvatars.each { |avatar, element|
 
 User.all.each { |user|
   Random.rand(1...6).times do
-    Game.create(user_id: user.id, playername: user.name, score: (Random.rand(1...14000)))
+    Game.create(user_id: user.id, winner_name: user.name, score: (Random.rand(1...14000)))
   end
 }
