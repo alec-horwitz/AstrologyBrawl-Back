@@ -1,3 +1,5 @@
+require_relative './base64Images.rb'
+
 SIGNS = {
   "Aquarius" => {type: 'air', avatar: 'https://onehdwallpaper.com/wp-content/uploads/2015/08/Aquarius-Horoscope-Desktop-Backgrounds.jpg'},
   "Gemini" => {type: 'air', avatar: 'https://www.englishclub.com/efl/wp-content/uploads/2011/07/03c-Gemini.png'},
@@ -11,4 +13,19 @@ SIGNS = {
   "Aries" => {type: 'fire', avatar: 'https://2.bp.blogspot.com/_WeQf3HIdYws/S_YL1j9bncI/AAAAAAAAAAc/1M-mJkzfMng/s1600/aries.jpg'},
   "Leo" => {type: 'fire', avatar: 'https://2.bp.blogspot.com/-1_2dylpfIqg/UV_hyTbRl_I/AAAAAAAAFAI/iZChMtwrNvo/s1600/Leo-Zodiac-Sign-1.jpeg'},
   "Sagittarius" => {type: 'fire', avatar: 'https://2.bp.blogspot.com/-obkvSdEM3jY/UWaJwGUfL7I/AAAAAAAAFEc/fTgiP_0KJaE/s1600/Sagittarius.jpeg'}
+}
+
+
+ARENA_IMAGE = {
+  water: {water: wwpic, air: wapic, fire: wfpic, earth: wepic},
+  air: {water: wapic, air: aapic, fire: afpic, earth: aepic},
+  fire: {water: wfpic, air: afpic, fire: ffpic, earth: fepic},
+  earth: {water: wepic, air: aepic, fire: fepic, earth: eepic},
+}
+
+ARENA_COLOR = {
+  water: {water:"http://1x1px.me/0000FF-1.png", air:"http://1x1px.me/9292C1-1.png", fire:"http://1x1px.me/800080-1.png", earth:"http://1x1px.me/00555F-1.png"},
+  air: {water:"http://1x1px.me/9292C1-1.png", air:"http://1x1px.me/7E7E7E-1.png", fire:"http://1x1px.me/FF8080-1.png", earth:"http://1x1px.me/80BD80-1.png"},
+  fire: {water:"http://1x1px.me/800080-1.png", air:"http://1x1px.me/FF8080-1.png", fire:"http://1x1px.me/NFF0000-1.png", earth:"http://1x1px.me/DEA500-1.png"},
+  earth: {water:"http://1x1px.me/00555F-1.png", air:"http://1x1px.me/80BD80-1.png", fire:"http://1x1px.me/DEA500-1.png", earth:"http://1x1px.me/00C800-1.png"},
 }
