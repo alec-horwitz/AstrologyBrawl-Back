@@ -17,10 +17,10 @@ SIGNS = {
 
 
 ARENA_IMAGE = {
-  water: {water: wwpic, air: wapic, fire: wfpic, earth: wepic},
-  air: {water: wapic, air: aapic, fire: afpic, earth: aepic},
-  fire: {water: wfpic, air: afpic, fire: ffpic, earth: fepic},
-  earth: {water: wepic, air: aepic, fire: fepic, earth: eepic},
+  water: {water: WWPIC, air: WAPIC, fire: WFPIC, earth: WEPIC},
+  air: {water: WAPIC, air: AAPIC, fire: AFPIC, earth: AEPIC},
+  fire: {water: WFPIC, air: AFPIC, fire: FFPIC, earth: FEPIC},
+  earth: {water: WEPIC, air: AEPIC, fire: FEPIC, earth: EEPIC},
 }
 
 ARENA_COLOR = {

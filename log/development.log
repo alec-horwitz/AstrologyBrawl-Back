@@ -357,3 +357,1383 @@ Processing by Api::V1::UsersController#showRandom as */*
 Completed 200 OK in 9ms (Views: 1.5ms | ActiveRecord: 1.7ms)
 
 
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2018-10-16 14:13:03 -0400
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"name"=>"Moxareck", "password"=>"test123", "session"=>{"name"=>"Moxareck", "password"=>"test123"}}
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Moxareck"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 287ms (Views: 0.3ms | ActiveRecord: 118.5ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2018-10-16 14:13:12 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"name"=>"Moxareck", "password"=>"test", "session"=>{"name"=>"Moxareck", "password"=>"test"}}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Moxareck"], ["LIMIT", 1]]
+Completed 200 OK in 113ms (Views: 3.3ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:13:12 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (7.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 46ms (Views: 4.0ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:13:12 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:13:14 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:13:19 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:13:19 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:14:04 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:14:10 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (7.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 17ms (Views: 4.5ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:14:10 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:00 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:01 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:01 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:02 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:03 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:03 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:03 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:04 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:04 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:04 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:05 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:05 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:06 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:07 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:07 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:07 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:08 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 15ms (Views: 7.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:08 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:09 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:10 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:10 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:10 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:12 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (2.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 19ms (Views: 8.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:12 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:12 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:13 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (3.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:13 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:14 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:14 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:14 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:15 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:16:16 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 15ms (Views: 7.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:16:16 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:16:16 -0400
+  
+ActionController::RoutingError (undefined method `const' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:18:47 -0400
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:18:48 -0400
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (undefined local variable or method `wwpic' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (16.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 106ms (Views: 5.6ms | ActiveRecord: 83.4ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:18:49 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:18:52 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:18:52 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:18:53 -0400
+  
+ActionController::RoutingError (undefined local variable or method `wwpic' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:18:54 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:18:54 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:18:55 -0400
+  
+ActionController::RoutingError (undefined local variable or method `wwpic' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:18:56 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:18:56 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:18:56 -0400
+  
+ActionController::RoutingError (undefined local variable or method `wwpic' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:18:57 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:18:57 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:18:57 -0400
+  
+ActionController::RoutingError (undefined local variable or method `wwpic' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:18:59 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:18:59 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2018-10-16 14:25:45 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"name"=>"Moxareck", "password"=>"test", "session"=>{"name"=>"Moxareck", "password"=>"test"}}
+  [1m[36mUser Load (15.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Moxareck"], ["LIMIT", 1]]
+Completed 200 OK in 241ms (Views: 1.3ms | ActiveRecord: 30.6ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:25:45 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:25:45 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:26:06 -0400
+  
+ActionController::RoutingError (undefined local variable or method `wwpic' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:26:08 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:26:08 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:26:09 -0400
+  
+ActionController::RoutingError (undefined local variable or method `wwpic' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:26:10 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:26:10 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:26:10 -0400
+  
+ActionController::RoutingError (undefined local variable or method `wwpic' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:26:11 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (2.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 21ms (Views: 12.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:26:11 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2018-10-16 14:28:46 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"name"=>"Moxareck", "password"=>"test", "session"=>{"name"=>"Moxareck", "password"=>"test"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Moxareck"], ["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 2.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:28:46 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:28:46 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:28:58 -0400
+  
+ActionController::RoutingError (undefined local variable or method `wwpic' for main:Object):
+  
+app/controllers/concerns/api/v1/users_controller.rb:1:in `require_relative'
+app/controllers/concerns/api/v1/users_controller.rb:1:in `<top (required)>'
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2018-10-16 14:35:05 -0400
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"name"=>"Moxareck", "password"=>"test", "session"=>{"name"=>"Moxareck", "password"=>"test"}}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Moxareck"], ["LIMIT", 1]]
+Completed 200 OK in 189ms (Views: 1.4ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:35:06 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (12.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 88ms (Views: 6.4ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:35:07 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:35:27 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.7ms)
+
+
+  
+NameError (uninitialized constant Api::V1::UsersController::ARENAIMAGE):
+  
+app/controllers/concerns/api/v1/users_controller.rb:29:in `showRandom'
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2018-10-16 14:36:19 -0400
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"name"=>"Moxareck", "password"=>"test", "session"=>{"name"=>"Moxareck", "password"=>"test"}}
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Moxareck"], ["LIMIT", 1]]
+Completed 200 OK in 214ms (Views: 1.6ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:36:21 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (13.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 62ms (Views: 4.9ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:36:21 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:36:33 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/concerns/api/v1/users_controller.rb:29:in `showRandom'
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2018-10-16 14:42:41 -0400
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"name"=>"Moxareck", "password"=>"test", "session"=>{"name"=>"Moxareck", "password"=>"test"}}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Moxareck"], ["LIMIT", 1]]
+Completed 200 OK in 204ms (Views: 1.8ms | ActiveRecord: 25.9ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:42:43 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (13.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 67ms (Views: 4.2ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:42:43 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:42:55 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:32 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 7.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:32 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (2.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:33 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:34 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 7.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:34 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:34 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 2.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:35 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:35 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:35 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:37 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:37 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:38 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:39 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:39 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:39 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:40 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:40 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:40 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:41 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:41 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:42 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:43 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 16ms (Views: 10.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:43 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:43 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:44 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:44 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (2.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:45 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:45 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:45 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:46 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:47 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:47 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:48 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:49 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (5.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 20ms (Views: 11.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:49 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:49 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:50 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:50 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:50 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:51 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:51 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:51 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:53 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:53 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:54 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:54 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:54 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:55 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:56 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:56 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:57 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:58 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:43:58 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:43:59 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:43:59 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 28ms (Views: 19.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:00 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:44:00 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 1.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:01 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:01 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/1" for 127.0.0.1 at 2018-10-16 14:44:01 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:04 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 16ms (Views: 10.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:04 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2018-10-16 14:44:11 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"name"=>"test", "password"=>"test", "session"=>{"name"=>"test", "password"=>"test"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:11 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 17ms (Views: 10.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:11 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:14 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:15 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (2.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 6.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:15 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:15 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:15 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:15 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:16 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:16 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (3.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:16 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:17 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 10ms (Views: 1.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:17 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:17 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:18 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 9ms (Views: 1.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:18 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:18 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:19 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:19 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:19 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:19 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:20 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:20 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:20 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:21 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 16ms (Views: 9.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:21 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:21 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:22 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:22 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:22 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/games/pages/0" for 127.0.0.1 at 2018-10-16 14:44:23 -0400
+Processing by Api::V1::GamesController#showPage as */*
+  Parameters: {"page"=>"0", "game"=>{}}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/games/pages" for 127.0.0.1 at 2018-10-16 14:44:23 -0400
+Processing by Api::V1::GamesController#showNumPages as */*
+  Parameters: {"game"=>{}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users/random/10" for 127.0.0.1 at 2018-10-16 14:44:23 -0400
+Processing by Api::V1::UsersController#showRandom as */*
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 1.5ms)
+
+

@@ -26,7 +26,9 @@ class Api::V1::UsersController < ApplicationController
     if (authorized?(@user))
       allUsers = User.all.select { |opponent| opponent.id != @user.id }
       opponent = allUsers[Random.rand(allUsers.length)]
-      render json: opponent, status: 200
+      arena_image = ARENA_IMAGE[@user.type1.to_sym][opponent.type1.to_sym]
+      arena_color = ARENA_COLOR[@user.type1.to_sym][opponent.type1.to_sym]
+      render json: {opponent: opponent, arena_image: arena_image, arena_color: arena_color}, status: 200
     else
       render json: nil, status: :unauthorized
     end
