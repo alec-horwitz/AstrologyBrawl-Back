@@ -1,5 +1,5 @@
 require_relative './base64ArenaImages.rb'
-require_relative './base64Avatar.rb'
+require_relative './base64Avatars.rb'
 
 SIGNS = {
   "Aquarius" => {type: 'air', avatar: AQUARIUS},
