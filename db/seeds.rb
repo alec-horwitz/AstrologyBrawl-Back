@@ -8,6 +8,7 @@
 
 require 'rest-client'
 require 'json'
+require_relative '../constants.rb'
 
 stockUsernames = ["Moxareck", "AstroMonkey77", "ProfaneFontaine", "GreenRanger19", "CyberCat<(^.^<)", "Alec", "No.3037","64BitRick","Leo-E","test","HellGaze451","RedGhost11"]
 
