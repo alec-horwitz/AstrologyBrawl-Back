@@ -9,21 +9,9 @@
 require 'rest-client'
 require 'json'
 
-
-stockAvatars = AVATARS
-
-stockMain = 15
-stockAttack = 5
-stockDefence = 5
-types = ["earth", "air", "fire", "water"]
 stockUsernames = ["Moxareck", "AstroMonkey77", "ProfaneFontaine", "GreenRanger19", "CyberCat<(^.^<)", "Alec", "No.3037","64BitRick","Leo-E","test","HellGaze451","RedGhost11"]
 
 index = 0
-SIGNS.each { |sign, avatar|
-  User.create(name: stockUsernames[index], password: "test", avatar: SIGNS[sign][:avatar], main: stockMain, attack: stockAttack, defence: stockDefence, type1: SIGNS[sign][:type], type2: types[Random.rand(0...4)], type3: types[Random.rand(0...4)])
-  index = index + 1
-}
-
 SIGNS.each { |sign, value|
   sign_2 = SIGNS.keys[Random.rand(0...SIGNS.keys.length)]
   sign_3 = SIGNS.keys[Random.rand(0...SIGNS.keys.length)]
