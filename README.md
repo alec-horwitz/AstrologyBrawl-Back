@@ -1,3 +1,12 @@
+Riquired:
+sudo gem install bundler
+ARCHFLAGS="-arch x86_64" bundle install
+Download the Postgres.app from https://postgresapp.com/
+Follow the first 2 steps of the 3 step installation instruction for the Postgres.app on https://postgresapp.com/
+
+
+
+
 Instuctions:
 
 Fork this repository and clone it to your computer.
@@ -10,11 +19,14 @@ Next you need to add a single line to the newly created .env file (using any met
 
 JWT_PASSWORD = "ANY_LONG_STRING_OF_RANDOM_CHARACTERS"
 
-After that run the following commands in terminal:
+Next download the Postgres.app from https://postgresapp.com/downloads.html
+and then follow the first 2 steps of the 3 step installation instructions for the Postgres.app on https://postgresapp.com/.
 
-* bundle install
-* rails db:migrate
-* rails db:reset
+After that run the following commands in terminal (you may need an admin password for some of these commands):
+
+* sudo gem install bundler
+* ARCHFLAGS="-arch x86_64" bundle install
+* rails db:setup
 * rails s
 
 Make sure it is running on port 3000 and you are good to go.
