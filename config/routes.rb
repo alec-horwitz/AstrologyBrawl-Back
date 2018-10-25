@@ -5,10 +5,10 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/users/random/:id', to: 'users#showRandom'
       # get '/users/login/:username/:password', to: 'users#showUser'
-      resources :users
+      resources :users, only: [:create, :show, :Update, :index]
       get '/games/pages/:page', to: 'games#showPage'
       get '/games/pages', to: 'games#showNumPages'
-      resources :games
+      resources :games, only: [:create, :show]
       post '/sessions', to: 'sessions#create'
     end
   end
