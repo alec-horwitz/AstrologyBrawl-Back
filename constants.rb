@@ -1,5 +1,6 @@
 require_relative './base64ArenaImages.rb'
 require_relative './base64Avatars.rb'
+require_relative './audioURLs.rb'
 
 SIGNS = {
   "Aquarius" => {type: 'air', avatar: AQUARIUS},
@@ -29,4 +30,8 @@ ARENA_COLOR = {
   air: {water:"http://1x1px.me/9292C1-1.png", air:"http://1x1px.me/7E7E7E-1.png", fire:"http://1x1px.me/FF8080-1.png", earth:"http://1x1px.me/80BD80-1.png"},
   fire: {water:"http://1x1px.me/800080-1.png", air:"http://1x1px.me/FF8080-1.png", fire:"http://1x1px.me/NFF0000-1.png", earth:"http://1x1px.me/DEA500-1.png"},
   earth: {water:"http://1x1px.me/00555F-1.png", air:"http://1x1px.me/80BD80-1.png", fire:"http://1x1px.me/DEA500-1.png", earth:"http://1x1px.me/00C800-1.png"},
+}
+
+MENU = {
+  music: LITTLE_PEOPLE
 }

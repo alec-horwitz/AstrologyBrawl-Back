@@ -1,9 +1,12 @@
+require_relative '../../constants.rb'
+
 class ApplicationController < ActionController::API
 
   def token_json(user)
     {
       user: user,
-      token: generate_token(user)
+      token: generate_token(user),
+      audio: MENU[:music]
     }
   end
 

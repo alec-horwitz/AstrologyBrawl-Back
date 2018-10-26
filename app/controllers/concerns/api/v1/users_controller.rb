@@ -47,11 +47,11 @@ class Api::V1::UsersController < ApplicationController
   def create
     # user_params = {name:"Test3", password:"test123", avatar:"https://1.bp.blogspot.com/-vRML1Dg9ECg/UWg6fAv0EcI/AAAAAAAAFFo/3WaNG6V8j9s/s1600/zodiac1+capricorn.jpg", main:"15", attack:"5", defence:"5", type1:"earth", type2:"water", type3:"air"}
     matchedUserNames = User.all.select { |userName| userName.name.downcase == user_create_params[:name].downcase }
-    token = nil
+    resp = nil
     if matchedUserNames[0]
-      user = nil
+      @user = nil
     else
-      user = User.create(user_create_params.merge({
+      @user = User.create(user_create_params.merge({
         status: "Your Turn",
         animation: "pulse",
         visible: "true",
@@ -66,13 +66,13 @@ class Api::V1::UsersController < ApplicationController
         attack: 5,
         defence: 5
         }))
-      if user.id == nil
-        user = nil
+      if @user.id == nil
+        @user = nil
       else
-        token = generate_token(user)
+        resp = token_json(@user)
       end
     end
-    render json: {user: user, token: token}, status: 201
+    render json: resp, status: 201
   end
 
   def update
