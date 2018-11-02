@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
     {
       user: user,
       token: generate_token(user),
-      # audio: MENU[:music]
+      # audio: MENU[:music] //enable if you'd like to send music with your create request
     }
   end
 

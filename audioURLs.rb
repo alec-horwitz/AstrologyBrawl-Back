@@ -1,3 +1,5 @@
+# This file might now be irrelivant given the functionality on the frontend
+
 LITTLE_PEOPLE = [
   {name: "Basique", url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1688270", duration: 218000},
   {name: "Moon", url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1688271", duration: 228000},

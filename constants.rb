@@ -33,5 +33,5 @@ ARENA_COLOR = {
 }
 
 MENU = {
-  music: LITTLE_PEOPLE
+  music: LITTLE_PEOPLE # should really change this to a more genral name
 }
