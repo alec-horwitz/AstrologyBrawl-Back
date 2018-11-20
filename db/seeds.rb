@@ -43,10 +43,21 @@ SIGNS.each { |sign, value|
 
 User.all.each { |user|
   Random.rand(1...6).times do
-    Game.create(
-      user_id: user.id,
+    loser = user
+    while user == loser
+      loser = User.all[Random.rand(0...User.all.length)]
+    end
+    game_data = Game.create(
+      winner_id: user.id,
       winner_name: user.name,
-      score: (Random.rand(1...14000)))
+      loser_id: loser.id,
+      loser_name: loser.name,
+      score: (Random.rand(1...14000))
+    )
+    user.games << game_data
+    loser.games << game_data
+    # game_data.user << user
+    # game_data.user << loser
   end
 }
 
