@@ -1,3 +1,5 @@
+require 'json'
+
 class Api::V1::GamesController < ApplicationController
   before_action :set_game, only: [:show,:update,:destroy]
   before_action :game_params, only: [:create,:update]
@@ -52,8 +54,12 @@ class Api::V1::GamesController < ApplicationController
 
   def create
     if (valid_token?)
-      game = Game.create(game_params)
-      render json: game, status: 201
+      game_data = Game.create(game_params)
+      winner = User.find(JSON.parse(game_data.winner)["id"])
+      loser = User.find(JSON.parse(game_data.loser)["id"])
+      winner.games << game_data
+      loser.games << game_data
+      render json: game_data, status: 201
     else
       render json: nil, status: :unauthorized
     end
@@ -81,7 +87,7 @@ class Api::V1::GamesController < ApplicationController
   private
 
   def game_params
-   params.permit(:score, :user_id, :winner_id, :winner, :winner_name, :winner_health, :winner_mod, :loser_id, :loser, :loser_name, :loser_health, :loser_mod)
+   params.permit(:score, :game_history, :user_id, :winner_id, :winner, :winner_name, :winner_health, :winner_mod, :loser_id, :loser, :loser_name, :loser_health, :loser_mod)
   end
 
   def set_game

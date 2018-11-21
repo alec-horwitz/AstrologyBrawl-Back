@@ -10,7 +10,7 @@ require 'rest-client'
 require 'json'
 require_relative '../constants.rb'
 
-stockUsernames = ["Moxareck", "AstroMonkey77", "ProfaneFontaine", "GreenRanger19", "CyberCat<(^.^<)", "Alec", "No.3037","64BitRick","Leo-E","test","HellGaze451","RedGhost11"]
+stockUsernames = ["Moxareck", "AstroMonkey77", "ProfaneFontaine", "GreenRanger19", "CyberCat<(^.^<)", "Alec", "No.3037","64BitRick","Leo-E","Jesse","HellGaze451","RedGhost11"]
 
 index = 0
 SIGNS.each { |sign, value|
@@ -48,10 +48,8 @@ User.all.each { |user|
       loser = User.all[Random.rand(0...User.all.length)]
     end
     game_data = Game.create(
-      winner_id: user.id,
-      winner_name: user.name,
-      loser_id: loser.id,
-      loser_name: loser.name,
+      winner: user.to_json,
+      loser: loser.to_json,
       score: (Random.rand(1...14000))
     )
     user.games << game_data
@@ -60,6 +58,33 @@ User.all.each { |user|
     # game_data.user << loser
   end
 }
+
+sign = SIGNS.keys[Random.rand(0...SIGNS.keys.length)]
+sign_2 = SIGNS.keys[Random.rand(0...SIGNS.keys.length)]
+sign_3 = SIGNS.keys[Random.rand(0...SIGNS.keys.length)]
+
+User.create(
+  name: "test",
+  password: "test",
+  password_confirmation: "test",
+  email: sign+"@"+sign_2+"."+sign_3,
+  sign1: sign,
+  sign2: sign_2,
+  sign3: sign_3,
+  status: "Your Turn",
+  animation: "pulse",
+  visible: "true",
+  hp: "100",
+  defending: "false",
+  charged: "false",
+  type1: SIGNS[sign][:type],
+  type2: SIGNS[sign_2][:type],
+  type3: SIGNS[sign_3][:type],
+  avatar: SIGNS[sign][:avatar],
+  main: 15,
+  attack: 5,
+  defence: 5
+)
 
 # user_id: winner.id,
 # winner: JSON.stringify(winner),

@@ -13,6 +13,7 @@ class CreateGames < ActiveRecord::Migration[5.1]
       t.string :loser_mod
       t.string :killing_blow
       t.string :game_mod
+      t.string :game_history
       t.string :arena, default: "https://il6.picdn.net/shutterstock/videos/711148/thumb/1.jpg"
       t.string :score
       t.string :mod0
