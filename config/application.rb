@@ -18,22 +18,22 @@ Bundler.require(*Rails.groups)
 
 module Backend
   class Application < Rails::Application
-        # Initialize configuration defaults for originally generated Rails version.
-        config.load_defaults 5.1
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 5.1
 
-        # Settings in config/environments/* take precedence over those specified here.
-        # Application configuration should go into files in config/initializers
-        # -- all .rb files in that directory are automatically loaded.
+    # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration should go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded.
 
-        # Only loads a smaller set of middleware suitable for API only apps.
-        # Middleware like session, flash, cookies can be added back manually.
-        # Skip views, helpers and assets when generating a new resource.
-        config.api_only = true
+    # Only loads a smaller set of middleware suitable for API only apps.
+    # Middleware like session, flash, cookies can be added back manually.
+    # Skip views, helpers and assets when generating a new resource.
+    config.api_only = true
 
-        config.middleware.insert_before 0, Rack::Cors do
-        allow do
-        # Defines the urls from which to allow ajax request
-        origins '*'
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+      # Defines the urls from which to allow ajax request
+      origins '*'
         # Defines which resources and http verbs are allowed
         # Documentation for the options verb: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS
         resource '*', :headers => :any, :methods => [:get, :post, :delete, :patch, :options]

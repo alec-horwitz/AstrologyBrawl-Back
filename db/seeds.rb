@@ -41,23 +41,23 @@ SIGNS.each { |sign, value|
   index = index + 1
 }
 
-User.all.each { |user|
-  Random.rand(1...6).times do
-    loser = user
-    while user == loser
-      loser = User.all[Random.rand(0...User.all.length)]
-    end
-    game_data = Game.create(
-      winner: user.to_json,
-      loser: loser.to_json,
-      score: (Random.rand(1...14000))
-    )
-    user.games << game_data
-    loser.games << game_data
-    # game_data.user << user
-    # game_data.user << loser
-  end
-}
+# User.all.each { |user|
+#   Random.rand(1...6).times do
+#     loser = user
+#     while user == loser
+#       loser = User.all[Random.rand(0...User.all.length)]
+#     end
+#     game_data = Game.create(
+#       winner: user.to_json,
+#       loser: loser.to_json,
+#       score: (Random.rand(1...14000))
+#     )
+#     user.games << game_data
+#     loser.games << game_data
+#     # game_data.user << user
+#     # game_data.user << loser
+#   end
+# }
 
 sign = SIGNS.keys[Random.rand(0...SIGNS.keys.length)]
 sign_2 = SIGNS.keys[Random.rand(0...SIGNS.keys.length)]
