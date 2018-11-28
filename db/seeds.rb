@@ -10,7 +10,7 @@ require 'rest-client'
 require 'json'
 require_relative '../constants.rb'
 
-stockUsernames = ["Moxareck", "AstroMonkey77", "ProfaneFontaine", "GreenRanger19", "CyberCat<(^.^<)", "Alec", "No.3037","64BitRick","Leo-E","Jesse","HellGaze451","RedGhost11"]
+stockUsernames = ["Moxareck", "AstroMonkey77", "ProfaneFontaine", "GreenRanger19", "CyberCat<(^.^<)", "RestlessJoe", "No.3037","64BitRick","Leo-E","Jesse","HellGaze451","RedGhost11"]
 
 index = 0
 SIGNS.each { |sign, value|
@@ -58,6 +58,33 @@ SIGNS.each { |sign, value|
 #     # game_data.user << loser
 #   end
 # }
+
+sign = "Capricorn"
+sign_2 = "Aries"
+sign_3 = "Aquarius"
+
+User.create(
+  name: "Alec",
+  password: "test",
+  password_confirmation: "test",
+  email: sign+"@"+sign_2+"."+sign_3,
+  sign1: sign,
+  sign2: sign_2,
+  sign3: sign_3,
+  status: "Your Turn",
+  animation: "pulse",
+  visible: "true",
+  hp: "100",
+  defending: "false",
+  charged: "false",
+  type1: SIGNS[sign][:type],
+  type2: SIGNS[sign_2][:type],
+  type3: SIGNS[sign_3][:type],
+  avatar: SIGNS[sign][:avatar],
+  main: 15,
+  attack: 5,
+  defence: 5
+)
 
 sign = SIGNS.keys[Random.rand(0...SIGNS.keys.length)]
 sign_2 = SIGNS.keys[Random.rand(0...SIGNS.keys.length)]
